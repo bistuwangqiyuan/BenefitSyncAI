@@ -1,0 +1,3669 @@
+{
+  "meta": {
+    "generated_at": "2026-07-26 05:24",
+    "data_as_of": "2026-07-26",
+    "git_rev": "302234d",
+    "python": "3.12.10",
+    "platform": "Windows-2025Server-10.0.26100-SP0",
+    "numpy": "2.5.1",
+    "seed": 20260726
+  },
+  "ledger": {
+    "n_sources": 108,
+    "n_assumptions": 34,
+    "by_confidence": {
+      "A": 95,
+      "B": 7,
+      "C": 3,
+      "D": 3
+    },
+    "share_primary_pct": 88.0
+  },
+  "trends": {
+    "weeks_observed": 53,
+    "weeks_at_zero": 50,
+    "weekly_mean_index": 1.98,
+    "alive_days": 9,
+    "peak_date": "2026-06-11",
+    "zero_since": "2026-06-19",
+    "provenance": [
+      "live_fetch"
+    ],
+    "status": {
+      "weekly": "live_fetch",
+      "daily": "live_fetch",
+      "errors": []
+    }
+  },
+  "opportunity": {
+    "criteria": {
+      "demand": {
+        "name": "需求可验证性",
+        "weight": 0.2,
+        "rationale": "原方案的致命伤就是把一个 9 天的新闻余波当成永久需求。需求能否被独立观测（实测搜索序列、在营竞品规模）必须占最高权重之一。"
+      },
+      "winnability": {
+        "name": "分发可赢性",
+        "weight": 0.22,
+        "rationale": "在 68% 零点击、第 1 位点击率再降 58% 的搜索环境下，'能否真的拿到分发'比'市场有多大'更决定成败，故给最高权重。"
+      },
+      "compliance": {
+        "name": "合规安全度（分越高越安全）",
+        "weight": 0.2,
+        "rationale": "第 1140 条按每次网页浏览计罚，罚金随流量线性放大而收入随转化率放大，两者不同阶。合规不是扣分项而是生死项。"
+      },
+      "automation": {
+        "name": "零人工可行度（20 小时/周约束下）",
+        "weight": 0.14,
+        "rationale": "唯一不可增加的投入是时间。任何需要持续人工销售或人工客服的模式，在单人 20 小时/周下都会失速。"
+      },
+      "unit_economics": {
+        "name": "单位经济与变现结构",
+        "weight": 0.14,
+        "rationale": "0.99 美元定价被支付固定费吃掉 33% 是结构性错误。客单价与变现渠道的结构比毛利率数字本身更重要。"
+      },
+      "exit": {
+        "name": "资产质量与退出倍数",
+        "weight": 0.1,
+        "rationale": "内容站 1.87× 年净利、含 AI 内容再折 39%，而 B 端订阅型资产为 3.9× 年净利。资产形态直接决定 5 年末的兑现能力。"
+      }
+    },
+    "robustness_caveat": "稳健性结果需要一条自我批评：C3 是 C1 与 C2 的组合，因此在六个维度中的多数维度上结构性地不低于其组成部分，夺冠比例接近 100% 有相当一部分来自这种构造上的近似占优，而非模型发现了什么额外信息。组合方案真正的代价只体现在'零人工可行度'一个维度上（6 分 vs C1 的 7 分）——也就是创始人时间。因此本方案在后续财务模型中把时间成本单列为一个口径，并在执行计划中对两条通道做了明确的先后顺序，而不是同时铺开。",
+    "candidates": [
+      {
+        "code": "C3",
+        "name": "双通道：免费消费者工具 + 付费数据订阅（共用一套数据层）",
+        "one_liner": "一次维护、两处变现：面向受益人的免费工具负责规模与可信度，面向机构的数据订阅负责利润与估值。",
+        "scores": {
+          "demand": 9,
+          "winnability": 8,
+          "compliance": 7,
+          "automation": 6,
+          "unit_economics": 8,
+          "exit": 7
+        },
+        "weighted": {
+          "demand": 1.8,
+          "winnability": 1.76,
+          "compliance": 1.4,
+          "automation": 0.84,
+          "unit_economics": 1.12,
+          "exit": 0.7
+        },
+        "total": 7.62,
+        "rank": 1,
+        "verdict": "边际成本几乎为零的对冲：数据层只维护一次，搜索流量塌陷时 B 端收入仍在，而消费者站本身就是 B 端最有说服力的销售材料。",
+        "evidence": {
+          "demand": [
+            "propel_scale",
+            "serp_snap_tx_gov_share",
+            "direct_express_migration"
+          ],
+          "winnability": [
+            "serp_tool_beats_article",
+            "ai_chatbot_referral_share",
+            "chartbeat_small_pub_decline"
+          ],
+          "compliance": [
+            "free_to_user_pattern",
+            "sec1140_penalty",
+            "qrg_expert_paraphrase_ok"
+          ],
+          "automation": [
+            "serp_geo_personalized"
+          ],
+          "unit_economics": [
+            "b2b_arpa_ref",
+            "stripe_fee_on_099"
+          ],
+          "exit": [
+            "acquire_saas_annual",
+            "ai_content_discount"
+          ]
+        }
+      },
+      {
+        "code": "C1",
+        "name": "州级到账日与资格自查工具站（消费者端）",
+        "one_liner": "按州维护 EBT/SNAP 发放规则与联邦付款日历，做成免费查询工具，靠展示广告变现。",
+        "scores": {
+          "demand": 9,
+          "winnability": 7,
+          "compliance": 6,
+          "automation": 7,
+          "unit_economics": 5,
+          "exit": 4
+        },
+        "weighted": {
+          "demand": 1.8,
+          "winnability": 1.54,
+          "compliance": 1.2,
+          "automation": 0.98,
+          "unit_economics": 0.7,
+          "exit": 0.4
+        },
+        "total": 6.62,
+        "rank": 2,
+        "verdict": "需求与可赢性都被实测支持，但单腿站在 Google 上：一次算法事件同时打掉流量与AdSense 资格，且退出倍数处于经纪商最看空的两个类目的交集。",
+        "evidence": {
+          "demand": [
+            "propel_scale",
+            "serp_snap_tx_gov_share",
+            "direct_express_migration"
+          ],
+          "winnability": [
+            "serp_snap_tx_gov_share",
+            "serp_tool_beats_article",
+            "aio_ctr_drop_pos1",
+            "zero_click_2026"
+          ],
+          "compliance": [
+            "sec1140_penalty",
+            "free_to_user_pattern",
+            "ftc_impersonation_rule"
+          ],
+          "automation": [
+            "serp_geo_personalized",
+            "qrg_expert_paraphrase_ok"
+          ],
+          "unit_economics": [
+            "ezoic_threshold",
+            "raptive_threshold",
+            "mediavine_rpm_yoy"
+          ],
+          "exit": [
+            "ef_under300k_monthly",
+            "ai_content_discount",
+            "ef_display_share"
+          ]
+        }
+      },
+      {
+        "code": "C2",
+        "name": "结构化福利数据集与 API（B 端）",
+        "one_liner": "把同一份 50 州发放规则做成版本化、带引用的机器可读数据，向金融科技、AI 应用与地方媒体订阅收费。",
+        "scores": {
+          "demand": 5,
+          "winnability": 6,
+          "compliance": 8,
+          "automation": 5,
+          "unit_economics": 8,
+          "exit": 8
+        },
+        "weighted": {
+          "demand": 1.0,
+          "winnability": 1.32,
+          "compliance": 1.6,
+          "automation": 0.7,
+          "unit_economics": 1.12,
+          "exit": 0.8
+        },
+        "total": 6.54,
+        "rank": 3,
+        "verdict": "合规暴露最低、客单价结构最健康、退出倍数最高，但需求缺乏可独立观测的证据，且 B 端获客高度依赖人工外呼——这正好撞上 20 小时/周的硬约束。单独走不通。",
+        "evidence": {
+          "demand": [
+            "direct_express_migration",
+            "ssa_api_readonly"
+          ],
+          "winnability": [
+            "ai_chatbot_referral_share",
+            "google_us_share"
+          ],
+          "compliance": [
+            "sec1140_penalty",
+            "ssa_oig_free_warning"
+          ],
+          "automation": [
+            "ssa_api_readonly"
+          ],
+          "unit_economics": [
+            "stripe_fee_on_099",
+            "stripe_fee"
+          ],
+          "exit": [
+            "acquire_saas_annual",
+            "ef_under300k_monthly"
+          ]
+        }
+      },
+      {
+        "code": "C5",
+        "name": "放弃本赛道，另择方向",
+        "one_liner": "完全脱离福利主题，另找非 YMYL 的细分。",
+        "scores": {
+          "demand": 5,
+          "winnability": 5,
+          "compliance": 7,
+          "automation": 6,
+          "unit_economics": 5,
+          "exit": 5
+        },
+        "weighted": {
+          "demand": 1.0,
+          "winnability": 1.1,
+          "compliance": 1.4,
+          "automation": 0.84,
+          "unit_economics": 0.7,
+          "exit": 0.5
+        },
+        "total": 5.54,
+        "rank": 4,
+        "verdict": "脱离 YMYL 确实能降低合规与质量评估风险，但也放弃了本项目唯一被实测证实的需求缺口与已建立的调研资产，各维度回落到无信息的先验水平。作为对照组保留。",
+        "evidence": {
+          "demand": [
+            "indie_reach_1k_mrr"
+          ],
+          "winnability": [
+            "ahrefs_top10_1yr_english",
+            "zero_click_2026"
+          ],
+          "compliance": [
+            "scaled_content_policy"
+          ],
+          "automation": [
+            "indie_never_5k"
+          ],
+          "unit_economics": [
+            "indie_reach_1k_mrr"
+          ],
+          "exit": [
+            "flippa_content_annual"
+          ]
+        }
+      },
+      {
+        "code": "C4",
+        "name": "原赛道的合规降级版（免费预填表单，用户自行提交）",
+        "one_liner": "不碰凭证、不收费，只生成用户可自行提交的预填材料与截止日提醒。",
+        "scores": {
+          "demand": 2,
+          "winnability": 1,
+          "compliance": 3,
+          "automation": 6,
+          "unit_economics": 2,
+          "exit": 2
+        },
+        "weighted": {
+          "demand": 0.4,
+          "winnability": 0.22,
+          "compliance": 0.6,
+          "automation": 0.84,
+          "unit_economics": 0.28,
+          "exit": 0.2
+        },
+        "total": 2.54,
+        "rank": 5,
+        "verdict": "即使剥掉所有违法部分，剩下的需求也不存在：目标人群约 28 万且正被官方主动清零，'ssa direct deposit change' 实测 53 周全为 0，而联邦社保类查询首页 86% 是 ssa.gov。更糟的是，官方正持续教育这批用户把'非 ssa.gov 的收费/代办网站'一律视为诈骗——这个信任缺口无法靠执行质量弥补。",
+        "evidence": {
+          "demand": [
+            "kw_zero_weeks",
+            "paper_check_recipients",
+            "ssa_no_annual_update"
+          ],
+          "winnability": [
+            "serp_ss_schedule_gov_share"
+          ],
+          "compliance": [
+            "sec1140_penalty",
+            "ftc_impersonation_rule",
+            "ssa_oig_free_warning"
+          ],
+          "automation": [
+            "ssa_1199_scope"
+          ],
+          "unit_economics": [
+            "paper_check_recipients"
+          ],
+          "exit": [
+            "ef_under300k_monthly"
+          ]
+        }
+      }
+    ],
+    "winner": {
+      "code": "C3",
+      "name": "双通道：免费消费者工具 + 付费数据订阅（共用一套数据层）",
+      "total": 7.62
+    },
+    "runner_up_gap": 1.0,
+    "robustness": {
+      "draws": 5000,
+      "win_share": {
+        "C1": 0.0,
+        "C2": 0.0,
+        "C3": 100.0,
+        "C4": 0.0,
+        "C5": 0.0
+      },
+      "champion_win_share_pct": 100.0,
+      "champion": "C3"
+    }
+  },
+  "unit_economics": {
+    "thresholds": {
+      "journey_sessions": 1000,
+      "journey_revshare_pct": 70,
+      "raptive_pageviews": 25000,
+      "raptive_revshare_pct": 75,
+      "mediavine_annual_revenue": 5000,
+      "ezoic_mau_closed": 250000
+    },
+    "rpm": {
+      "adsense": 5.0,
+      "journey": 8.5,
+      "premium": 19.0,
+      "annual_decay_pct": 10.0
+    },
+    "ladder": [
+      {
+        "sessions": 500,
+        "pageviews": 575,
+        "tier": "AdSense",
+        "rpm": 5.0,
+        "ad_revenue": 2.0,
+        "b2b_accounts": 0.0,
+        "b2b_revenue": 1.0,
+        "total_revenue": 4.0,
+        "cost": 67.17,
+        "net": -63.0
+      },
+      {
+        "sessions": 1000,
+        "pageviews": 1150,
+        "tier": "Journey by Mediavine",
+        "rpm": 8.5,
+        "ad_revenue": 8.0,
+        "b2b_accounts": 0.0,
+        "b2b_revenue": 3.0,
+        "total_revenue": 11.0,
+        "cost": 67.21,
+        "net": -56.0
+      },
+      {
+        "sessions": 5000,
+        "pageviews": 5750,
+        "tier": "Journey by Mediavine",
+        "rpm": 8.5,
+        "ad_revenue": 42.0,
+        "b2b_accounts": 0.2,
+        "b2b_revenue": 14.0,
+        "total_revenue": 56.0,
+        "cost": 67.57,
+        "net": -11.0
+      },
+      {
+        "sessions": 25000,
+        "pageviews": 28750,
+        "tier": "Raptive / Mediavine Official",
+        "rpm": 19.0,
+        "ad_revenue": 475.0,
+        "b2b_accounts": 0.9,
+        "b2b_revenue": 69.0,
+        "total_revenue": 544.0,
+        "cost": 69.39,
+        "net": 475.0
+      },
+      {
+        "sessions": 50000,
+        "pageviews": 57500,
+        "tier": "Raptive / Mediavine Official",
+        "rpm": 19.0,
+        "ad_revenue": 950.0,
+        "b2b_accounts": 1.8,
+        "b2b_revenue": 138.0,
+        "total_revenue": 1088.0,
+        "cost": 71.65,
+        "net": 1017.0
+      },
+      {
+        "sessions": 150000,
+        "pageviews": 172500,
+        "tier": "Raptive / Mediavine Official",
+        "rpm": 19.0,
+        "ad_revenue": 2850.0,
+        "b2b_accounts": 5.2,
+        "b2b_revenue": 415.0,
+        "total_revenue": 3265.0,
+        "cost": 80.72,
+        "net": 3184.0
+      },
+      {
+        "sessions": 300000,
+        "pageviews": 345000,
+        "tier": "Raptive / Mediavine Official",
+        "rpm": 19.0,
+        "ad_revenue": 5700.0,
+        "b2b_accounts": 10.5,
+        "b2b_revenue": 830.0,
+        "total_revenue": 6530.0,
+        "cost": 94.33,
+        "net": 6435.0
+      }
+    ],
+    "fixed_monthly_cost": {
+      "infra": 5.87,
+      "tooling": 52.25,
+      "llm": 9.0,
+      "total": 67.12
+    },
+    "one_time_costs": {
+      "域名（首年）": 10.44,
+      "合规审查与条款起草": 800.0,
+      "建司与支付通道（Stripe Atlas，可选）": 500.0
+    },
+    "one_time_total": 1310.44,
+    "micropayment": [
+      {
+        "price": 0.99,
+        "label": "原方案：单次代提交",
+        "stripe_fee": 0.329,
+        "stripe_fee_pct": 33.2,
+        "mor_fee_pct": 55.5,
+        "net": 0.661
+      },
+      {
+        "price": 2.99,
+        "label": "原方案：家庭同步",
+        "stripe_fee": 0.387,
+        "stripe_fee_pct": 12.9,
+        "mor_fee_pct": 21.7,
+        "net": 2.603
+      },
+      {
+        "price": 79.0,
+        "label": "本方案：B 端数据订阅（月）",
+        "stripe_fee": 2.591,
+        "stripe_fee_pct": 3.3,
+        "mor_fee_pct": 5.6,
+        "net": 76.409
+      }
+    ],
+    "breakeven_sessions": 6006.0,
+    "pages": 900
+  },
+  "monte_carlo": {
+    "paths": 20000,
+    "months": 60,
+    "calibration": {
+      "lognormal_mu": 9.2343,
+      "lognormal_sigma": 2.0532,
+      "median_mature_sessions": 10242
+    },
+    "win_rate_pct": 86.96,
+    "payoff_ratio": 95.71,
+    "avg_win_r": 41.531,
+    "avg_loss_r": 0.434,
+    "expected_moic": 37.059,
+    "median_moic": 3.436,
+    "annualized_pct": 105.96,
+    "median_annualized_pct": 28.0,
+    "expected_moic_full_cost": 0.423,
+    "median_moic_full_cost": 0.057,
+    "annualized_full_cost_pct": -15.81,
+    "win_rate_full_cost_pct": 6.21,
+    "payoff_ratio_full_cost": 4.57,
+    "founder_hours_5y": 5200,
+    "founder_hourly_cost": 25.0,
+    "founder_time_cost": 130000.0,
+    "invested_cash_mean": 2228.0,
+    "one_time_cost": 1310.44,
+    "realized_mean": 55633.0,
+    "realized_median": 7573.0,
+    "effective_hourly_mean": 10.7,
+    "effective_hourly_median": 1.46,
+    "breakeven_hourly_mean": 10.27,
+    "breakeven_hourly_median": 1.03,
+    "p_beat_hourly_cost_pct": 6.27,
+    "p_total_loss_pct": 0.03,
+    "p_reach_1k_pct": 18.23,
+    "p_reach_5k_pct": 5.21,
+    "median_month_to_1k": 23,
+    "p_penalized_pct": 27.06,
+    "p_sold_pct": 35.73,
+    "p_cash_exhausted_pct": 0.0,
+    "moic_percentiles": {
+      "p5": 0.489,
+      "p10": 0.827,
+      "p25": 1.606,
+      "p50": 3.436,
+      "p75": 9.81,
+      "p90": 43.256,
+      "p95": 109.124,
+      "p99": 583.418
+    },
+    "sessions_p50_final": 3043,
+    "sessions_p90_final": 68905,
+    "net_p50_final": 195.0,
+    "yearly": [
+      {
+        "year": 1,
+        "roi": -47.61,
+        "annualized": -47.61,
+        "roi_full_cost": -97.47,
+        "annualized_full_cost": -97.47,
+        "median_net_month": -59.0
+      },
+      {
+        "year": 2,
+        "roi": 266.6,
+        "annualized": 91.47,
+        "roi_full_cost": -90.41,
+        "annualized_full_cost": -69.04,
+        "median_net_month": 77.0
+      },
+      {
+        "year": 3,
+        "roi": 983.58,
+        "annualized": 121.29,
+        "roi_full_cost": -80.15,
+        "annualized_full_cost": -41.67,
+        "median_net_month": 158.0
+      },
+      {
+        "year": 4,
+        "roi": 1865.69,
+        "annualized": 110.56,
+        "roi_full_cost": -72.36,
+        "annualized_full_cost": -27.49,
+        "median_net_month": 187.0
+      },
+      {
+        "year": 5,
+        "roi": 3605.86,
+        "annualized": 105.96,
+        "roi_full_cost": -57.72,
+        "annualized_full_cost": -15.81,
+        "median_net_month": 195.0
+      }
+    ]
+  },
+  "kelly": {
+    "cash_basis": {
+      "f_star": 0.9978,
+      "half_kelly": 0.4989,
+      "growth_at_f_star": 1.50388,
+      "f_star_amount": 5987.0,
+      "half_kelly_amount": 2993.0
+    },
+    "full_cost_basis": {
+      "f_star": 0.0,
+      "half_kelly": 0.0,
+      "growth_at_f_star": 0.0
+    },
+    "naive_two_point": {
+      "p": 0.8696,
+      "b": 95.713,
+      "f_naive": 0.8682
+    },
+    "naive_vs_full_gap": -0.1296,
+    "naive_note": "本例中两点近似给出的比例反而更低（0.87 对 1.00），与教科书里'朴素式偏激进'的常见方向相反。原因是本项目的亏损侧远没有'全损'那么深：5% 分位仍收回近一半现金。两点近似把所有失败都当成全损，于是过度惩罚了下注比例。无论方向如何，用两点式描述一个连续分布本身就是错的。",
+    "breakeven_hourly": {
+      "mean": 10.27,
+      "median": 1.03
+    },
+    "assumed_hourly": 25.0,
+    "reference_budget": 6000.0,
+    "caveat": "Kelly 公式的前提是同一场赌局可以按相同赔率重复无限次下注，且每次下注规模可以连续调整。单次创业一条都不满足：机会不可重复、投入不可分割（域名与合规支出是阶梯式的，不存在'投入 37% 的网站'）、结果分布会随自身行动改变。因此下面的比例只能作为风险资本上限的参照，不能当作出资指令。半 Kelly 是实务上的通行折中，它牺牲约 25% 的长期增长率换取大幅降低的回撤深度。",
+    "interpretation": "两个口径给出方向完全相反的答案，这个反差本身就是本项目最重要的结论。现金口径下 Kelly 逼近上限（1.00），因为真正掏出去的钱只有约 2,228 美元，相对于潜在回报小到几乎不构成风险——换句话说，'该不该投这笔钱'根本不是需要用 Kelly 来回答的问题。全成本口径下最优比例为 0.00，因为把 5,200 小时按 25 美元/小时计价后，期望回报为负。真正的下注标的不是现金，是时间。"
+  },
+  "sensitivity": {
+    "tornado": {
+      "base": 0.98,
+      "metric": "breakeven_hourly_median",
+      "metric_label": "中位折合时薪（美元/小时）",
+      "paths": 6000,
+      "rows": [
+        {
+          "key": "b2b_inbound_per_month",
+          "label": "不依赖消费者流量的 B 端月均自然获客数（目录、API 市场、开源渠道）",
+          "low_input": 0.05,
+          "high_input": 0.4,
+          "low_metric": -0.18,
+          "high_metric": 5.29,
+          "swing": 5.47,
+          "direction": "正向"
+        },
+        {
+          "key": "b2b_arpa",
+          "label": "B 端数据订阅的每账户月均收入",
+          "low_input": 29.0,
+          "high_input": 199.0,
+          "low_metric": -0.21,
+          "high_metric": 5.1,
+          "swing": 5.31,
+          "direction": "正向"
+        },
+        {
+          "key": "algo_shock_median",
+          "label": "单次算法事件对可见度的中位乘数",
+          "low_input": 0.96,
+          "high_input": 1.0,
+          "low_metric": 0.72,
+          "high_metric": 1.36,
+          "swing": 0.64,
+          "direction": "正向"
+        },
+        {
+          "key": "mature_sessions_p22",
+          "label": "成熟期月会话数达到该值的概率为 22%（校准锚点一）",
+          "low_input": 40000,
+          "high_input": 60000,
+          "low_metric": 0.79,
+          "high_metric": 1.25,
+          "swing": 0.46,
+          "direction": "正向"
+        },
+        {
+          "key": "penalty_hazard_annual",
+          "label": "遭遇人工处罚/大规模内容滥用判罚的年风险率",
+          "low_input": 0.02,
+          "high_input": 0.15,
+          "low_metric": 1.13,
+          "high_metric": 0.78,
+          "swing": 0.35,
+          "direction": "反向"
+        },
+        {
+          "key": "rpm_annual_decay",
+          "label": "RPM 的年衰减率",
+          "low_input": 0.0,
+          "high_input": 0.25,
+          "low_metric": 1.14,
+          "high_metric": 0.8,
+          "swing": 0.34,
+          "direction": "反向"
+        },
+        {
+          "key": "ramp_midpoint_months",
+          "label": "流量爬坡的中点月份（logistic 曲线拐点）",
+          "low_input": 18,
+          "high_input": 32,
+          "low_metric": 1.13,
+          "high_metric": 0.84,
+          "swing": 0.29,
+          "direction": "反向"
+        },
+        {
+          "key": "p_sale_given_threshold",
+          "label": "达到可挂牌门槛后 5 年内实际成交的概率",
+          "low_input": 0.5,
+          "high_input": 0.9,
+          "low_metric": 0.89,
+          "high_metric": 1.09,
+          "swing": 0.2,
+          "direction": "正向"
+        },
+        {
+          "key": "content_pages_total",
+          "label": "五年内维护的页面总量",
+          "low_input": 400,
+          "high_input": 2000,
+          "low_metric": 1.05,
+          "high_metric": 0.91,
+          "swing": 0.14,
+          "direction": "反向"
+        },
+        {
+          "key": "b2b_conv_per_10k_sessions",
+          "label": "每 1 万月会话可转化的 B 端付费账户数",
+          "low_input": 0.1,
+          "high_input": 1.0,
+          "low_metric": 0.97,
+          "high_metric": 1.04,
+          "swing": 0.07,
+          "direction": "正向"
+        },
+        {
+          "key": "rpm_premium",
+          "label": "Raptive / Mediavine Official 阶段会话 RPM（全年均值）",
+          "low_input": 10.0,
+          "high_input": 30.0,
+          "low_metric": 0.96,
+          "high_metric": 0.99,
+          "swing": 0.03,
+          "direction": "正向"
+        },
+        {
+          "key": "exit_multiple_base",
+          "label": "退出倍数基准（已计入 AI 内容折让）",
+          "low_input": 11.0,
+          "high_input": 22.0,
+          "low_metric": 0.97,
+          "high_metric": 0.98,
+          "swing": 0.01,
+          "direction": "正向"
+        }
+      ],
+      "note": "龙卷风分析用 6,000 条路径以控制运行时间，故其基准值 0.98 与正文引用的 20,000 条路径结果存在小数点后的抽样差异，属正常蒙特卡洛误差，不影响变量之间的相对排序。"
+    },
+    "scenarios": [
+      {
+        "key": "pessimistic",
+        "name": "悲观",
+        "story": "搜索侧持续恶化：AI 摘要进一步吞掉点击，小型发布商流量继续下行，平台对 AI 辅助内容的判罚趋严，广告单价随之走低。",
+        "win_rate_pct": 17.35,
+        "win_rate_full_cost_pct": 1.15,
+        "expected_moic": 5.415,
+        "median_moic": 0.174,
+        "annualized_pct": 40.19,
+        "expected_moic_full_cost": 0.066,
+        "breakeven_hourly_mean": 1.05,
+        "breakeven_hourly_median": -0.5,
+        "p_reach_1k_pct": 4.22,
+        "p_reach_5k_pct": 1.15,
+        "realized_median": 569.0,
+        "net_p50_final": 7.0
+      },
+      {
+        "key": "base",
+        "name": "基准",
+        "story": "全部取 inputs.py 中的登记值。",
+        "win_rate_pct": 85.52,
+        "win_rate_full_cost_pct": 5.72,
+        "expected_moic": 28.081,
+        "median_moic": 3.351,
+        "annualized_pct": 94.84,
+        "expected_moic_full_cost": 0.332,
+        "breakeven_hourly_mean": 7.97,
+        "breakeven_hourly_median": 0.98,
+        "p_reach_1k_pct": 18.33,
+        "p_reach_5k_pct": 4.55,
+        "realized_median": 7256.0,
+        "net_p50_final": 192.0
+      },
+      {
+        "key": "optimistic",
+        "name": "乐观",
+        "story": "工具型页面在 AI 摘要环境下的抗性被验证，州级数据层形成事实标准，B 端订阅超预期，退出时按含订阅收入的混合倍数成交。",
+        "win_rate_pct": 100.0,
+        "win_rate_full_cost_pct": 21.02,
+        "expected_moic": 104.985,
+        "median_moic": 21.654,
+        "annualized_pct": 153.64,
+        "expected_moic_full_cost": 1.173,
+        "breakeven_hourly_mean": 29.3,
+        "breakeven_hourly_median": 7.74,
+        "p_reach_1k_pct": 48.38,
+        "p_reach_5k_pct": 14.6,
+        "realized_median": 42307.0,
+        "net_p50_final": 671.0
+      }
+    ],
+    "top3": [
+      "b2b_inbound_per_month",
+      "b2b_arpa",
+      "algo_shock_median"
+    ],
+    "verdict": "结论对以下三个变量最敏感，它们共同的特点是——都还没有被真实数据验证过：不依赖消费者流量的 B 端月均自然获客数（目录、API 市场、开源渠道）、B 端数据订阅的每账户月均收入、单次算法事件对可见度的中位乘数。因此本方案把'先花 8 周用最小成本验证这三件事'放在任何实质性投入之前，而不是先建站再祈祷。"
+  },
+  "roadmap": {
+    "phases": [
+      {
+        "id": "falsify",
+        "when": "第 0–8 周",
+        "months": 1.8,
+        "hours": 160
+      },
+      {
+        "id": "buildout",
+        "when": "第 3–9 个月",
+        "months": 7,
+        "hours": 607
+      },
+      {
+        "id": "b2b",
+        "when": "第 10–24 个月",
+        "months": 15,
+        "hours": 1300
+      },
+      {
+        "id": "harden",
+        "when": "第 25–60 个月",
+        "months": 36,
+        "hours": 3120
+      }
+    ],
+    "weekly_hours": 20.0,
+    "total_hours": 5187,
+    "remaining_after_gate1": 5027
+  },
+  "debunk": {
+    "orig_ltv_ratio": 738.0
+  },
+  "sources": [
+    {
+      "id": "kw_zero_weeks",
+      "claim": "锚点热词近 53 周中取值为 0 的周数",
+      "value": 50,
+      "unit": "周",
+      "publisher": "本项目 Google Trends 实测",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "美国区 2025-07-20 至 2026-07-19 周粒度，实时抓取可复现（model/fetch_trends.py）；非零周仅 3 个：06-07=100、06-14=4、06-21=1。前置调研口头汇报的'46 周'与其自列的非零周清单相矛盾，以本次实抓数据为准"
+    },
+    {
+      "id": "kw_total_weeks",
+      "claim": "锚点热词观测总周数",
+      "value": 53,
+      "unit": "周",
+      "publisher": "本项目 Google Trends 实测",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "kw_12mo_avg",
+      "claim": "锚点热词近 12 个月平均热度（满分 100）",
+      "value": 1.98,
+      "unit": "指数",
+      "publisher": "本项目 Google Trends 实测",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "kw_alive_days",
+      "claim": "锚点热词从起量到归零的存活天数",
+      "value": 9,
+      "unit": "天",
+      "publisher": "本项目 Google Trends 实测（日粒度）",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "2026-06-10 起量，06-11 峰值，06-19 起归零"
+    },
+    {
+      "id": "kw_peak_date",
+      "claim": "锚点热词峰值日",
+      "value": "2026-06-11",
+      "unit": "日期",
+      "publisher": "本项目 Google Trends 实测",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "与 USA TODAY 报道 SSA 全面电子化同日"
+    },
+    {
+      "id": "kw_zero_since",
+      "claim": "锚点热词归零起始日",
+      "value": "2026-06-19",
+      "unit": "日期",
+      "publisher": "本项目 Google Trends 实测",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "kw_capture_day_decay",
+      "claim": "原计划书采集日（06-12）相对峰值的衰减",
+      "value": 67,
+      "unit": "%",
+      "publisher": "本项目 Google Trends 实测",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "峰值 100 → 采集日 33"
+    },
+    {
+      "id": "kw_peak_vs_head",
+      "claim": "锚点热词历史峰值 vs 头部词 social security 的相对量级",
+      "value": 9,
+      "unit": "指数(对方=100)",
+      "publisher": "本项目 Google Trends 实测",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=social%20security",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "trends_bucket_nature",
+      "claim": "Trending Now 的搜索量为短窗口分桶标签而非月均搜索量",
+      "value": "bucketed",
+      "unit": "定性",
+      "publisher": "Google Trends 官方说明 / Trending Now",
+      "url": "https://support.google.com/trends/answer/4365533",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "原计划书把 24 小时分桶标签 200K+ 当作月均量并乘季节系数"
+    },
+    {
+      "id": "usatoday_trigger",
+      "claim": "触发热词的新闻源：USA TODAY 报道 SSA 年内完成全面电子化",
+      "value": "2026-06-11",
+      "unit": "日期",
+      "publisher": "USA TODAY",
+      "url": "https://www.usatoday.com/story/money/2026/06/11/social-security-benefits-electronic-payment/90506560007/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ssa_account_no_proxy",
+      "claim": "SSA 规定：任何人不得代他人创建或使用 my Social Security 账户，即使有书面或口头授权",
+      "value": "No one can create or use an account on your behalf, even with your written or verbal permission",
+      "unit": "条文",
+      "publisher": "美国社会保障署 SSA",
+      "url": "https://www.ssa.gov/myaccount/create.html",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "logingov_no_automation",
+      "claim": "Login.gov 规则：严禁自动化访问（含自动认证、表单提交）",
+      "value": "Automated access to Login.gov is strictly prohibited",
+      "unit": "条文",
+      "publisher": "Login.gov",
+      "url": "https://www.login.gov/policy/rules-of-use/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ssa_tos_federal_crime",
+      "claim": "SSA 服务条款：就个人身份欺骗社会保障署属联邦犯罪",
+      "value": "federal crime to deceive the SSA about an individual's identity",
+      "unit": "条文",
+      "publisher": "美国社会保障署 SSA",
+      "url": "https://www.ssa.gov/help/di/TOS.html",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "sec1140_penalty",
+      "claim": "《社会保障法》第 1140 条：违规通信罚金，网站按每次浏览单独计罚",
+      "value": 13132,
+      "unit": "美元/次浏览",
+      "publisher": "SSA 监察长办公室 OIG",
+      "url": "https://oig.ssa.gov/fraud-reporting/consumer-protection-section-1140/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "each viewing of the website is subject to a separate penalty；广播按每次播出 65,653 美元"
+    },
+    {
+      "id": "sec1140_statute",
+      "claim": "第 1140 条法条本身（42 U.S.C. §1320b-10），涵盖任何互联网或电子通信",
+      "value": "42 U.S.C. 1320b-10",
+      "unit": "法条",
+      "publisher": "Cornell LII",
+      "url": "https://www.law.cornell.edu/uscode/text/42/1320b-10",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "sec1140_case_usafiling",
+      "claim": "第 1140 条实际和解案例：对社保卡收费网站",
+      "value": 50000,
+      "unit": "美元",
+      "publisher": "SSA OIG",
+      "url": "https://oig.ssa.gov/news-releases/2019-09-19-newsroom-news-releases-company-pays-50000-penalty-settle-claim-misleading-consumers-social-security/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "sec1140_case_lexisnexis",
+      "claim": "第 1140 条实际和解案例：LexisNexis 因产品命名暗示与 SSA 直连",
+      "value": 54000,
+      "unit": "美元",
+      "publisher": "SSA OIG",
+      "url": "https://oig.ssa.gov/news-releases/2018-10-23-newsroom-news-releases-oct23-1140-settlement/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "并下架该产品；该公司本身拥有合法 CBSV 权限，仍因'如何描述'被罚"
+    },
+    {
+      "id": "sec1140_case_trak1",
+      "claim": "第 1140 条实际和解案例：背景调查公司使用 SSA 徽标",
+      "value": 103950,
+      "unit": "美元",
+      "publisher": "SSA OIG",
+      "url": "https://oig.ssa.gov/news-releases/2019-08-27-newsroom-news-releases-background-screening-companies-agree-pay-103950-penalty-settle-claim-they/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ssa_fee_authorization",
+      "claim": "42 U.S.C. §406(a)(5)：未经授权收取超额代理费为轻罪",
+      "value": "misdemeanor, fine up to $500 or imprisonment up to 1 year",
+      "unit": "法条",
+      "publisher": "美国法典",
+      "url": "https://uscode.house.gov/view.xhtml?req=%28title%3A42+section%3A406+edition%3Aprelim%29",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ftc_impersonation_rule",
+      "claim": "FTC 政府冒充规则（16 CFR Part 461，2024-04-01 生效）民事罚金上限",
+      "value": 53088,
+      "unit": "美元/次违规",
+      "publisher": "美国联邦贸易委员会 FTC",
+      "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-D/part-461",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "含'by implication'暗示性冒充；首年即关停 13 个网站"
+    },
+    {
+      "id": "ftc_citizens_disability",
+      "claim": "FTC/DOJ 诉 Citizens Disability（2025-09-30 和解）：SSDI 外呼营销",
+      "value": 1000000,
+      "unit": "美元(实付)",
+      "publisher": "美国联邦贸易委员会 FTC",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2025/09/citizens-disability-pay-1-million-over-ftc-charges-it-made-tens-millions-illegal-misleading-calls",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "判罚 200 万、实付 100 万；1.09 亿次外呼含 2570 万次拨往 DNC 名单"
+    },
+    {
+      "id": "ssa_beneficiaries_total",
+      "claim": "SSA 受益人总数（2026 年 6 月）",
+      "value": 75656000,
+      "unit": "人",
+      "publisher": "SSA Quick Facts",
+      "url": "https://www.ssa.gov/policy/docs/quickfacts/stat_snapshot/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "原计划书称 5200 万，低估约 2360 万"
+    },
+    {
+      "id": "paper_check_recipients",
+      "claim": "仍领纸质支票的受益人（2026 年）",
+      "value": 280000,
+      "unit": "人",
+      "publisher": "The Hill / Nexstar",
+      "url": "https://thehill.com/business/personal-finance/5906488-social-security-is-fully-doing-away-with-paper-checks-how-to-prepare/",
+      "confidence": "B",
+      "retrieved": "2026-07-26",
+      "note": "占全部受益人不足 1%，且随电子化推进主动归零"
+    },
+    {
+      "id": "eo_14247",
+      "claim": "第 14247 号行政令：2025-09-30 起联邦支付停止签发纸质支票",
+      "value": "2025-03-25",
+      "unit": "日期",
+      "publisher": "白宫",
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/03/modernizing-payments-to-and-from-americas-bank-account/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ssa_no_annual_update",
+      "claim": "SSA 明确：受益人无需为继续领取按期联系 SSA（不存在'年度电子更新'义务）",
+      "value": "No. You do not need to contact Social Security to continue your monthly benefits",
+      "unit": "条文",
+      "publisher": "SSA",
+      "url": "https://www.ssa.gov/news/en/identity-proofing.html",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ssa_eft_mandate_1998",
+      "claim": "电子支付强制要求的真实起点（非 2024 年 1 月）",
+      "value": "1998-12",
+      "unit": "日期",
+      "publisher": "SSA Handbook §122.2",
+      "url": "https://www.ssa.gov/OP_Home/handbook/handbook.01/handbook-0122.html",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ssa_1199_scope",
+      "claim": "SSA-1199 系列为境外居住受益人的国际直存表，无 -BK 变体",
+      "value": "International Direct Deposit",
+      "unit": "定性",
+      "publisher": "SSA",
+      "url": "https://www.ssa.gov/forms/ssa-1199.html",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ssa_api_readonly",
+      "claim": "SSA 公开 API 仅 5 个只读 ArcGIS 统计/地址接口，无交易类接口",
+      "value": 5,
+      "unit": "个",
+      "publisher": "SSA Open Data",
+      "url": "https://www.ssa.gov/data/OASDIBenefitPaymentsByState.htm",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "不存在 /v1/receipt 端点"
+    },
+    {
+      "id": "ecbsv_cost",
+      "claim": "eCBSV（唯一的认证类数据交换）最低年费，且仅限 GLBA 金融机构用于授信场景",
+      "value": 5100,
+      "unit": "美元/年",
+      "publisher": "SSA",
+      "url": "https://www.ssa.gov/dataexchange/eCBSV/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "propel_blocked",
+      "claim": "先例：Conduent 单方切断 Propel 对州级 EBT 系统的抓取访问",
+      "value": "约 80% 用户受影响",
+      "unit": "定性",
+      "publisher": "纽约时报",
+      "url": "https://www.nytimes.com/2018/04/23/technology/start-up-fight-poverty-food-stamp-giant-blocking-it.html",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "Propel 有 8000 万美元融资仍被切断；本方案据此不做任何抓取式代登录"
+    },
+    {
+      "id": "ssa_oig_free_warning",
+      "claim": "SSA OIG 公开警告：社保卡相关服务免费，无需使用收费的第三方网站",
+      "value": "You ARE NOT required to use one of these services",
+      "unit": "条文",
+      "publisher": "SSA OIG",
+      "url": "https://oig.ssa.gov/scam-alerts/2026-03-10-ssa-provides-new-and-replacement-social-security-cards-for-free/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "orig_claimed_volume",
+      "claim": "原方案宣称的锚点热词搜索量（实为 Trending Now 的 24 小时分桶标签）",
+      "value": 200000,
+      "unit": "次",
+      "publisher": "原方案文档（本仓库存档）",
+      "url": "file:googletrendhot.txt",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "原文写作 200,000+ 并据此乘季节系数外推为月均量；分桶性质见 trends_bucket_nature"
+    },
+    {
+      "id": "orig_ltv_low",
+      "claim": "原方案表格中的 LTV 之一",
+      "value": 1.12,
+      "unit": "美元",
+      "publisher": "原方案文档（本仓库存档）",
+      "url": "file:googletrendhot.txt",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "与 orig_ltv_high 出自同一份文档，两者相差约 738 倍"
+    },
+    {
+      "id": "orig_ltv_high",
+      "claim": "原方案表格中的 LTV 之二",
+      "value": 827,
+      "unit": "美元",
+      "publisher": "原方案文档（本仓库存档）",
+      "url": "file:googletrendhot.txt",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "原文以此值支撑营收预测，同时又在另一处使用 1.12 美元"
+    },
+    {
+      "id": "orig_payment_cost_share",
+      "claim": "原方案假设的支付与云成本合计占收入比",
+      "value": 11,
+      "unit": "%",
+      "publisher": "原方案文档（本仓库存档）",
+      "url": "file:googletrendhot.txt",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "仅 Stripe 对 0.99 美元客单价的固定费就已达 33.2%"
+    },
+    {
+      "id": "ahrefs_top10_1yr_all",
+      "claim": "新发布页面一年内进入前 10 的比例（全样本 100 万 URL）",
+      "value": 1.74,
+      "unit": "%",
+      "publisher": "Ahrefs",
+      "url": "https://ahrefs.com/blog/how-long-does-it-take-to-rank-in-google-and-how-old-are-top-ranking-pages/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ahrefs_top10_1yr_english",
+      "claim": "同上，过滤为非空英文内容后的比例（200 万 URL）",
+      "value": 6.11,
+      "unit": "%",
+      "publisher": "Ahrefs",
+      "url": "https://ahrefs.com/blog/how-long-does-it-take-to-rank-in-google-and-how-old-are-top-ranking-pages/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ahrefs_top10_highvol",
+      "claim": "新页面一年内为高搜索量词进入前 10 的比例",
+      "value": 0.3,
+      "unit": "%",
+      "publisher": "Ahrefs",
+      "url": "https://ahrefs.com/blog/how-long-does-it-take-to-rank-in-google-and-how-old-are-top-ranking-pages/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ahrefs_winner_within_1mo",
+      "claim": "在进入前 10 的少数页面中，首月即达成的占比",
+      "value": 40.82,
+      "unit": "%",
+      "publisher": "Ahrefs",
+      "url": "https://ahrefs.com/blog/how-long-does-it-take-to-rank-in-google-and-how-old-are-top-ranking-pages/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "排名突破是双峰分布：早期不破则大概率永不破"
+    },
+    {
+      "id": "ahrefs_top1_age",
+      "claim": "排名第 1 的页面平均年龄",
+      "value": 5,
+      "unit": "年",
+      "publisher": "Ahrefs",
+      "url": "https://ahrefs.com/blog/how-long-does-it-take-to-rank-in-google-and-how-old-are-top-ranking-pages/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "aio_ctr_drop_pos1",
+      "claim": "AI Overview 使第 1 位自然点击率下降幅度（2026-12 复测）",
+      "value": 58.0,
+      "unit": "%",
+      "publisher": "Ahrefs",
+      "url": "https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "2025-03 首测为 34.5%，一年内恶化"
+    },
+    {
+      "id": "aio_prevalence_edu_finance",
+      "claim": "教育型金融查询触发 AI Overview 的比例",
+      "value": 91,
+      "unit": "%",
+      "publisher": "BrightEdge",
+      "url": "https://www.brightedge.com/resources/weekly-ai-search-insights/google-ymyl-finance-ai-overviews",
+      "confidence": "B",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "pew_click_with_aio",
+      "claim": "出现 AI 摘要时用户点击自然结果的访问占比",
+      "value": 8,
+      "unit": "%",
+      "publisher": "Pew Research Center",
+      "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "n=900 名美国成年人真实浏览行为，68,879 次查询"
+    },
+    {
+      "id": "pew_click_without_aio",
+      "claim": "无 AI 摘要时用户点击自然结果的访问占比",
+      "value": 15,
+      "unit": "%",
+      "publisher": "Pew Research Center",
+      "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "pew_click_inside_aio",
+      "claim": "点击 AI 摘要内部引用链接的访问占比",
+      "value": 1,
+      "unit": "%",
+      "publisher": "Pew Research Center",
+      "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "被 AI 引用 ≠ 拿到流量；'成为 AI 引用源'不是可行的流量战略"
+    },
+    {
+      "id": "zero_click_2026",
+      "claim": "美国 Google 搜索中未产生任何点击的比例（2026 年 1–4 月）",
+      "value": 68.01,
+      "unit": "%",
+      "publisher": "SparkToro / Similarweb",
+      "url": "https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "2024 年为 60.45%"
+    },
+    {
+      "id": "chartbeat_small_pub_decline",
+      "claim": "日均 1 万 PV 以下小型出版商 2025 年搜索流量变化",
+      "value": -60,
+      "unit": "%",
+      "publisher": "Chartbeat（经 Press Gazette 报道）",
+      "url": "https://pressgazette.co.uk/media-audience-and-business-data/us-publishers-see-traffic-boost-for-breaking-news-from-google-discover/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "10 万 PV 以上为 -22%；越小跌得越狠，新站起步即在最差分档"
+    },
+    {
+      "id": "define_evergreen_decline",
+      "claim": "大型出版商常青型内容（指南/解释/测评）自 2024-11 以来的搜索流量变化",
+      "value": -40,
+      "unit": "%",
+      "publisher": "Define Media Group（64 家出版商面板，经 Press Gazette 报道）",
+      "url": "https://pressgazette.co.uk/media-audience-and-business-data/us-publishers-see-traffic-boost-for-breaking-news-from-google-discover/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "core_updates_28mo",
+      "claim": "2024-03 至 2026-06 期间 Google 确认的排名系统更新次数",
+      "value": 16,
+      "unit": "次",
+      "publisher": "Google Search Status Dashboard",
+      "url": "https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "平均每 7–8 周一次，属不可对冲的经常性风险"
+    },
+    {
+      "id": "march2026_fell_out_top100",
+      "claim": "2026-03 核心更新后原前 10 页面跌出前 100 的比例",
+      "value": 24.1,
+      "unit": "%",
+      "publisher": "SE Ranking（经 Search Engine Land 报道）",
+      "url": "https://searchengineland.com/march-2026-google-core-update-what-changed-474397",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "sistrix_winners",
+      "claim": "2026-03 核心更新的赢家画像：官方与机构、专业垂直、成熟品牌；输家：聚合站与比价站",
+      "value": "official/institutional, specialist, established brands",
+      "unit": "定性",
+      "publisher": "Aleyda Solis / Sistrix（经 Search Engine Land 报道）",
+      "url": "https://searchengineland.com/march-2026-google-core-update-what-changed-474397",
+      "confidence": "B",
+      "retrieved": "2026-07-26",
+      "note": "Census.gov、BLS.gov 在事实型查询上显著获益"
+    },
+    {
+      "id": "scaled_content_policy",
+      "claim": "Google 反垃圾政策：大规模内容滥用与生成方式无关，仅看意图与价值",
+      "value": "no matter whether content is produced through automation, human efforts, or some combination",
+      "unit": "条文",
+      "publisher": "Google Search Central",
+      "url": "https://developers.google.com/search/blog/2024/03/core-update-spam-policies",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "spam_policy_covers_ai_answers",
+      "claim": "2026-05-15 起 Google 反垃圾政策明确覆盖生成式 AI 回答",
+      "value": "or attempting to manipulate generative AI responses in Google Search",
+      "unit": "条文",
+      "publisher": "Google（经 Search Engine Land 报道）",
+      "url": "https://searchengineland.com/google-updates-search-spam-policies-to-clarify-it-applies-to-generative-ai-responses-477657",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "GEO/AI 引用优化同样在处罚范围内，不存在政策真空区"
+    },
+    {
+      "id": "qrg_ymyl_anonymous_lowest",
+      "claim": "质量评估指南：YMYL 页面若完全没有网站或内容创作者信息，应判 Lowest",
+      "value": "YMYL pages or websites ... with absolutely no information about the website or content creator should be rated Lowest",
+      "unit": "条文",
+      "publisher": "Google 搜索质量评估指南（2025-09-11 版）",
+      "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/uk//searchqualityevaluatorguidelines.pdf",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "qrg_suspect_scaled_lowest",
+      "claim": "质量评估指南：即便无法确认生成方式，只要强烈怀疑大规模内容滥用即判 Lowest",
+      "value": "Even if you are unsure of the method of creation ... you should still use the Lowest rating when you strongly suspect scaled content abuse",
+      "unit": "条文",
+      "publisher": "Google 搜索质量评估指南（2025-09-11 版）",
+      "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/uk//searchqualityevaluatorguidelines.pdf",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "qrg_expert_paraphrase_ok",
+      "claim": "质量评估指南留出的合规窗口：由专家把政府政策改写为易懂语言是有价值的",
+      "value": "when an expert paraphrases the contents of a government policy in easy-to-understand language",
+      "unit": "条文",
+      "publisher": "Google 搜索质量评估指南（2025-09-11 版）",
+      "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/uk//searchqualityevaluatorguidelines.pdf",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "关键词是 expert：必须有具名且可核验的责任人"
+    },
+    {
+      "id": "adsense_couples_search_spam",
+      "claim": "Google 发布商政策：不得在违反搜索反垃圾政策的页面投放广告",
+      "value": "must not place Google-served ads on screens that violate the Spam policies for Google web search",
+      "unit": "条文",
+      "publisher": "Google Publisher Policies",
+      "url": "https://support.google.com/adsense/answer/10502938",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "同一次违规会同时消灭流量与收入，两大风险高度相关"
+    },
+    {
+      "id": "manual_action_base_rate",
+      "claim": "2024-03 核心更新中被完全移除索引的广告网络站点占比",
+      "value": 1.9,
+      "unit": "%",
+      "publisher": "Originality.ai（约 7.9 万站样本）",
+      "url": "https://originality.ai/can-google-detect-penalize-ai-content",
+      "confidence": "B",
+      "retrieved": "2026-07-26",
+      "note": "独立复核为 1.7%（Ian Nuttall，49,345 站）；这是全样本基准率，纯 AI 站条件概率显著更高"
+    },
+    {
+      "id": "deindexed_ai_share",
+      "claim": "被移除索引站点中可判定发布过 AI 内容的比例",
+      "value": 86,
+      "unit": "%",
+      "publisher": "Originality.ai（175 站、30,614 URL 抽样）",
+      "url": "https://originality.ai/can-google-detect-penalize-ai-content",
+      "confidence": "B",
+      "retrieved": "2026-07-26",
+      "note": "151/175；其中 51/175 约 30% 为 95% 以上纯 AI 生成"
+    },
+    {
+      "id": "google_us_share",
+      "claim": "Google 在美国搜索市场的份额（2026-06）",
+      "value": 86.67,
+      "unit": "%",
+      "publisher": "StatCounter",
+      "url": "https://gs.statcounter.com/search-engine-market-share/all/united-states-of-america/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ai_chatbot_referral_share",
+      "claim": "四大 AI 聊天机器人合计带来的搜索引荐流量份额（2026-05）",
+      "value": 0.29,
+      "unit": "%",
+      "publisher": "Cloudflare Radar 数据（二手转引）",
+      "url": "https://technologychecker.io/blog/search-engine-market-share",
+      "confidence": "C",
+      "retrieved": "2026-07-26",
+      "note": "精确小数不可靠，但'AI 渠道几乎不导流'的方向被 Ahrefs 与 SparkToro 独立佐证"
+    },
+    {
+      "id": "serp_ss_schedule_gov_share",
+      "claim": "查询 social security payment schedule 2026 首页 7 条结果中 ssa.gov 占比",
+      "value": 86,
+      "unit": "%",
+      "publisher": "本项目 SERP 实测（美国区，2026-07-26）",
+      "url": "https://www.google.com/search?q=social+security+payment+schedule+2026&gl=us",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "6/7 为 ssa.gov，唯一非政府结果是 AARP；独立站无机会"
+    },
+    {
+      "id": "serp_snap_tx_gov_share",
+      "claim": "查询 SNAP EBT deposit dates Texas 首页 9 条结果中 .gov 占比",
+      "value": 11,
+      "unit": "%",
+      "publisher": "本项目 SERP 实测（美国区，2026-07-26）",
+      "url": "https://www.google.com/search?q=SNAP+EBT+deposit+dates+Texas&gl=us",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "1/9；独立站 snapscreener.com 排名第 1 且被 AI Overview 引用，foodstampsneed.com 第 5"
+    },
+    {
+      "id": "serp_tool_beats_article",
+      "claim": "在 YMYL 福利类查询中胜出的独立站形态为工具（资格自查/到账日计算），而非文章",
+      "value": "calculator/screener outranks .gov",
+      "unit": "定性",
+      "publisher": "本项目 SERP 实测（美国区，2026-07-26）",
+      "url": "https://www.google.com/search?q=what+is+the+income+limit+for+medicaid&gl=us",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "snapscreener.com 位列 3 个 .gov 域名之上"
+    },
+    {
+      "id": "serp_geo_personalized",
+      "claim": "美国福利类查询高度按 IP 地理个性化，全国性内容站需与 50 套州级机构竞争",
+      "value": "state-localized",
+      "unit": "定性",
+      "publisher": "本项目 SERP 实测（美国区，2026-07-26）",
+      "url": "https://www.google.com/search?q=how+to+apply+for+snap+benefits&gl=us",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "propel_scale",
+      "claim": "Propel（EBT 余额与到账查询）月活用户规模，验证该需求真实存在",
+      "value": 5000000,
+      "unit": "人",
+      "publisher": "Propel",
+      "url": "https://www.propel.app/blog/is-propel-a-scam/",
+      "confidence": "B",
+      "retrieved": "2026-07-26",
+      "note": "约每 4 个美国 SNAP 家庭有 1 个在用；对用户免费，靠广告与 interchange"
+    },
+    {
+      "id": "free_to_user_pattern",
+      "claim": "该赛道所有已成规模的运营者无一例外对受益人免费",
+      "value": "Propel / SNAP Screener / BenefitsUSA / WhenIsMyCheck / FoodStampsNeed",
+      "unit": "定性",
+      "publisher": "本项目竞品核验",
+      "url": "https://www.snapscreener.com/about",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "变现来自广告、赞助、interchange 或 B2B 转介；无一向受益人收费"
+    },
+    {
+      "id": "direct_express_migration",
+      "claim": "Direct Express 发卡行由 Comerica 迁移至 Fifth Third，过渡沟通计划于 2026 年中",
+      "value": "~3.4M cardholders",
+      "unit": "定性",
+      "publisher": "SSA PolicyNet EM-26005 REV",
+      "url": "https://secure.ssa.gov/apps10/reference.nsf/links/05182026111816AM",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "真实、有明确日期、影响约 340 万人的信息缺口"
+    },
+    {
+      "id": "benefitscalculus_nonexistent",
+      "claim": "原计划书所列竞品 BenefitsCalculus.com 域名未注册",
+      "value": "NXDOMAIN",
+      "unit": "定性",
+      "publisher": "本项目权威 DNS 查询（8.8.8.8）",
+      "url": "https://dns.google/query?name=benefitscalculus.com",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ezoic_threshold",
+      "claim": "Ezoic 自 2026-02-19 起的准入门槛（对新站实质关闭）",
+      "value": 250000,
+      "unit": "月活用户",
+      "publisher": "Ezoic",
+      "url": "https://osticket.ezoic.com/kb/article/getting-started-ezoics-requirements?lang=en_US",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "Incubator 每月全球仅收 20 家且不放宽流量要求；'先长到 5 万会话再进 Mediavine'的旧路径已失效"
+    },
+    {
+      "id": "journey_threshold",
+      "claim": "Journey by Mediavine 准入门槛",
+      "value": 1000,
+      "unit": "会话/月",
+      "publisher": "Mediavine",
+      "url": "https://help.mediavine.com/what-does-it-take-to-get-approved-by-mediavine",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "journey_revshare",
+      "claim": "Journey by Mediavine 发布商分成",
+      "value": 70,
+      "unit": "%",
+      "publisher": "Mediavine",
+      "url": "https://journeymv.zendesk.com/hc/en-us/articles/23783857493787-Revenue-Share",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "raptive_threshold",
+      "claim": "Raptive 准入门槛",
+      "value": 25000,
+      "unit": "页面浏览/月",
+      "publisher": "Raptive",
+      "url": "https://raptive.com/blog/opening-the-door-to-more-creators-who-meet-raptive-quality-standards/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "并要求 50% 以上流量来自美加英澳新"
+    },
+    {
+      "id": "raptive_revshare",
+      "claim": "Raptive 发布商分成",
+      "value": 75,
+      "unit": "%",
+      "publisher": "Raptive",
+      "url": "https://raptive.com/reach-your-full-potential-with-raptive/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "mediavine_official_threshold",
+      "claim": "Mediavine Official 准入门槛（改为收入门槛，非流量门槛）",
+      "value": 5000,
+      "unit": "美元/年广告收入",
+      "publisher": "Mediavine",
+      "url": "https://help.mediavine.com/revenue-share",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "adsense_revshare",
+      "claim": "Google AdSense 展示广告发布商分成",
+      "value": 68,
+      "unit": "%",
+      "publisher": "Google AdSense",
+      "url": "https://support.google.com/adsense/answer/9724?hl=en",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "mediavine_rpm_yoy",
+      "claim": "Mediavine 发布商 2025 年末至 2026 年初报告的 RPM 同比变化",
+      "value": -30,
+      "unit": "%",
+      "publisher": "Empire Flippers 2026 State of the Industry Report",
+      "url": "https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf",
+      "confidence": "B",
+      "retrieved": "2026-07-26",
+      "note": "RPM 应按下行建模，不能按持平"
+    },
+    {
+      "id": "seniors_smartphone",
+      "claim": "65 岁以上美国人智能手机拥有率（低于 50 岁以下的 97%）",
+      "value": 78,
+      "unit": "%",
+      "publisher": "Pew Research Center NPORS 2025 (n=5,022)",
+      "url": "https://www.pewresearch.org/internet/fact-sheet/mobile/?menuItem=13d95e33-8fb8-45ef-938e-d22b96c7206e",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "目标人群桌面占比偏高，对 RPM 略为有利"
+    },
+    {
+      "id": "domain_cost",
+      "claim": "Cloudflare Registrar .com 年费（按成本价）",
+      "value": 10.44,
+      "unit": "美元/年",
+      "publisher": "Cloudflare Registrar",
+      "url": "https://www.cloudflare.com/products/registrar/",
+      "confidence": "C",
+      "retrieved": "2026-07-26",
+      "note": "按 Verisign 批发价 10.26 + ICANN 0.18 重构；2026-11-01 起批发价升至 10.97"
+    },
+    {
+      "id": "cloudflare_workers_paid",
+      "claim": "Cloudflare Workers 付费计划起步价（RAG 需要，Free 档 10ms CPU 不够）",
+      "value": 5.0,
+      "unit": "美元/月",
+      "publisher": "Cloudflare",
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "cloudflare_pages_bandwidth",
+      "claim": "Cloudflare Pages 静态带宽与请求计费方式",
+      "value": "unmetered",
+      "unit": "定性",
+      "publisher": "Cloudflare",
+      "url": "https://pages.cloudflare.com/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "1 万 / 10 万 / 100 万 PV 三档成本均为 5 美元/月，带宽不计费"
+    },
+    {
+      "id": "infra_floor",
+      "claim": "Cloudflare 技术栈固定月成本下限（域名摊销+Pages+D1+R2+Resend+Sentry+BetterStack+Workers）",
+      "value": 5.87,
+      "unit": "美元/月",
+      "publisher": "本项目按各厂商官方定价页汇总",
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ahrefs_starter",
+      "claim": "Ahrefs Starter 档月费（2026-01 新增，Semrush 无对标档位）",
+      "value": 29.0,
+      "unit": "美元/月",
+      "publisher": "Ahrefs",
+      "url": "https://ahrefs.com/pricing",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "screaming_frog",
+      "claim": "Screaming Frog SEO Spider 年费",
+      "value": 279.0,
+      "unit": "美元/年",
+      "publisher": "Screaming Frog",
+      "url": "https://www.screamingfrog.co.uk/seo-spider/pricing/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "llm_1000_articles_cheap",
+      "claim": "生成并核验 1000 篇 1500 词内容的 LLM 成本（DeepSeek V4-Flash + 缓存）",
+      "value": 2.38,
+      "unit": "美元",
+      "publisher": "本项目按厂商官方费率测算，见 research/cost_model.py",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "四段式流水线：提纲/初稿/修订/事实核查，共 1 万输入+5600 输出 token 每篇"
+    },
+    {
+      "id": "llm_1000_articles_frontier",
+      "claim": "同上，改用前沿模型（Claude Opus 4.8 + 缓存 + 批处理）",
+      "value": 85.28,
+      "unit": "美元",
+      "publisher": "本项目按厂商官方费率测算，见 research/cost_model.py",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "LLM 成本在本量级不构成约束；真正的约束是每周 20 小时的人工核验时间"
+    },
+    {
+      "id": "stripe_fee",
+      "claim": "Stripe 美国本土卡费率",
+      "value": "2.9% + $0.30",
+      "unit": "费率",
+      "publisher": "Stripe",
+      "url": "https://stripe.com/pricing",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "stripe_fee_on_099",
+      "claim": "0.99 美元定价被 Stripe 手续费吃掉的收入比例",
+      "value": 33.2,
+      "unit": "%",
+      "publisher": "本项目按 Stripe 官方费率测算",
+      "url": "https://stripe.com/pricing",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "Paddle/Lemon Squeezy 为 55.6%；原计划书假设的合计成本仅 11%"
+    },
+    {
+      "id": "stripe_atlas",
+      "claim": "Stripe Atlas 一次性建司费用（含无需 SSN 获取 EIN）",
+      "value": 500,
+      "unit": "美元",
+      "publisher": "Stripe Atlas",
+      "url": "https://docs.stripe.com/atlas/signup",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "次年起注册代理 100 美元/年"
+    },
+    {
+      "id": "w8ben_default_withholding",
+      "claim": "未提交 W-8BEN 时美国来源 FDAP 所得的预扣税率",
+      "value": 30,
+      "unit": "%",
+      "publisher": "美国国税局 IRS",
+      "url": "https://www.irs.gov/instructions/iw8ben",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "services_income_sourcing",
+      "claim": "劳务所得按'劳务发生地'定源：完全在美国境外提供的服务为外国来源",
+      "value": "IRC 862(a)(3)",
+      "unit": "法条",
+      "publisher": "美国国税局 IRS",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/nonresident-aliens-sourcing-of-income",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "广告与联盟收入通常按劳务定性；若被定性为特许权使用费则改按'使用地'定源并预扣"
+    },
+    {
+      "id": "ef_under300k_monthly",
+      "claim": "Empire Flippers 2025 实际成交：30 万美元以下资产倍数",
+      "value": 22.42,
+      "unit": "×月净利",
+      "publisher": "Empire Flippers 2026 State of the Industry Report",
+      "url": "https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "n=129，占全部成交 77.7%，平均成交价 91,098 美元；折合 1.87× 年净利"
+    },
+    {
+      "id": "ef_avg_2025",
+      "claim": "Empire Flippers 2025 全部成交平均倍数（较 2024 年下降 10.1%）",
+      "value": 23.93,
+      "unit": "×月净利",
+      "publisher": "Empire Flippers 2026 State of the Industry Report",
+      "url": "https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ef_distressed",
+      "claim": "Empire Flippers 困境资产挂牌倍数",
+      "value": 13.7,
+      "unit": "×月净利",
+      "publisher": "Empire Flippers 2026 State of the Industry Report",
+      "url": "https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ef_typical",
+      "claim": "Empire Flippers 典型质量档挂牌倍数",
+      "value": 27.8,
+      "unit": "×月净利",
+      "publisher": "Empire Flippers 2026 State of the Industry Report",
+      "url": "https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "ef_display_share",
+      "claim": "展示广告类资产在 Empire Flippers 2025 成交中的占比",
+      "value": 13.3,
+      "unit": "%",
+      "publisher": "Empire Flippers 2026 State of the Industry Report",
+      "url": "https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "报告原话：许多知名联盟 SEO 玩家已完全退出"
+    },
+    {
+      "id": "ai_content_discount",
+      "claim": "含 AI 内容的站点相对纯人工内容站点的成交价折让",
+      "value": 39,
+      "unit": "%",
+      "publisher": "Originality.AI 分析 Motion Invest 12 个月实际成交数据",
+      "url": "https://originality.ai/blog/ai-website-sales-study",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "AI 内容站 1.5× 年营收 vs 人工 2.1×；且多花 19 天（+54%）才售出"
+    },
+    {
+      "id": "flippa_content_annual",
+      "claim": "Flippa H1 2026：内容站平均倍数（前四分位 4.68×）",
+      "value": 2.32,
+      "unit": "×年净利",
+      "publisher": "Flippa",
+      "url": "https://flippa.com/blog/digital-ma-insights-h1-2026/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "acquire_saas_annual",
+      "claim": "Acquire.com 已确认成交的 SaaS 中位数倍数（2024 与 2025 均为此值）",
+      "value": 3.9,
+      "unit": "×年净利",
+      "publisher": "Acquire.com Biannual Acquisition Multiples Report (2026-01)",
+      "url": "https://blog.acquire.com/acquire-com-biannual-acquisition-multiples-report-jan-2026/",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "B 端订阅型资产较内容型资产有约 45% 溢价，是本方案设置 B 端通道的估值理由之一"
+    },
+    {
+      "id": "bls_survival_5yr",
+      "claim": "美国新建企业 5 年存活率（BLS 完整队列均值）",
+      "value": 51.5,
+      "unit": "%",
+      "publisher": "美国劳工统计局 BLS Business Employment Dynamics Table 7",
+      "url": "https://www.bls.gov/bdm/us_age_naics_00_table7.txt",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": "BLS 仅统计有雇员的经营单位，单人无雇员企业基本不在此口径内，51.5% 应视为上界"
+    },
+    {
+      "id": "bls_survival_1yr",
+      "claim": "美国新建企业 1 年存活率",
+      "value": 80.1,
+      "unit": "%",
+      "publisher": "BLS Table 7",
+      "url": "https://www.bls.gov/bdm/us_age_naics_00_table7.txt",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "bls_survival_2yr",
+      "claim": "美国新建企业 2 年存活率",
+      "value": 71.2,
+      "unit": "%",
+      "publisher": "BLS Table 7",
+      "url": "https://www.bls.gov/bdm/us_age_naics_00_table7.txt",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "bls_survival_3yr",
+      "claim": "美国新建企业 3 年存活率",
+      "value": 63.8,
+      "unit": "%",
+      "publisher": "BLS Table 7",
+      "url": "https://www.bls.gov/bdm/us_age_naics_00_table7.txt",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "bls_survival_4yr",
+      "claim": "美国新建企业 4 年存活率",
+      "value": 57.0,
+      "unit": "%",
+      "publisher": "BLS Table 7",
+      "url": "https://www.bls.gov/bdm/us_age_naics_00_table7.txt",
+      "confidence": "A",
+      "retrieved": "2026-07-26",
+      "note": ""
+    },
+    {
+      "id": "correlation_below_1x",
+      "claim": "风险投资基准：未能返还 1 倍本金的融资占比",
+      "value": 65.0,
+      "unit": "%",
+      "publisher": "Correlation Ventures（21,640 笔美国风险融资，2004–2013）",
+      "url": "https://sethlevine.com/archives/2014/08/venture-outcomes-are-even-more-skewed-than-you-think.html",
+      "confidence": "C",
+      "retrieved": "2026-07-26",
+      "note": "原始研究从未直接公开，所有引用均可追溯至同一转述；仅作对照基准"
+    },
+    {
+      "id": "microconf_under_1k_mrr",
+      "claim": "独立 SaaS 中月经常性收入低于 1000 美元的占比（最大单一群体）",
+      "value": 28,
+      "unit": "%",
+      "publisher": "MicroConf State of Independent SaaS 2024 (n=469)",
+      "url": "https://microconf.com/state-of-independent-saas",
+      "confidence": "D",
+      "retrieved": "2026-07-26",
+      "note": "自选择样本；分母不含从未上线即放弃的项目，真实无条件比例更差"
+    },
+    {
+      "id": "indie_reach_1k_mrr",
+      "claim": "已上线的独立项目达到 1000 美元/月的概率区间",
+      "value": "20–30",
+      "unit": "%",
+      "publisher": "MicroConf 2024 与 RockingWeb 2025 两项自选择调查的交叉推断",
+      "url": "https://microconf.com/state-of-independent-saas",
+      "confidence": "D",
+      "retrieved": "2026-07-26",
+      "note": "仅用于校准蒙特卡洛的成熟流量分布，不作为结论直接引用"
+    },
+    {
+      "id": "indie_never_5k",
+      "claim": "已上线的独立项目从未达到 5000 美元/月的比例",
+      "value": 82,
+      "unit": "%",
+      "publisher": "RockingWeb 2025 (n=1,000)",
+      "url": "https://rockingweb.com/indie-hackers-statistics",
+      "confidence": "D",
+      "retrieved": "2026-07-26",
+      "note": ""
+    }
+  ],
+  "assumptions": [
+    {
+      "id": "cash_budget",
+      "claim": "创始人可投入的自有现金上限",
+      "value": 6000,
+      "unit": "美元",
+      "rationale": "用户给定区间 2,000–10,000 美元，取中值建模；超出即判定为'无法继续注资'而失败",
+      "low": 2000,
+      "high": 10000,
+      "note": ""
+    },
+    {
+      "id": "weekly_hours",
+      "claim": "每周可投入工时",
+      "value": 20,
+      "unit": "小时/周",
+      "rationale": "用户给定硬约束",
+      "low": 15,
+      "high": 25,
+      "note": ""
+    },
+    {
+      "id": "founder_hourly_cost",
+      "claim": "创始人时间的机会成本单价",
+      "value": 25,
+      "unit": "美元/小时",
+      "rationale": "无法从外部来源确定个人机会成本，取一个保守的可自证时薪；本项目将现金口径与含时间成本的全成本口径分别列示，避免只报现金 ROI 造成的系统性高估",
+      "low": 10,
+      "high": 60,
+      "note": ""
+    },
+    {
+      "id": "mature_sessions_p22",
+      "claim": "成熟期月会话数达到该值的概率为 22%（校准锚点一）",
+      "value": 50000,
+      "unit": "会话/月",
+      "rationale": "50,000 会话/月约对应 1,000 美元/月广告收入；用已上线独立项目达到 1k MRR 的 20–30% 区间下沿偏中位置作为校准点",
+      "low": 40000,
+      "high": 60000,
+      "note": ""
+    },
+    {
+      "id": "mature_sessions_p5",
+      "claim": "成熟期月会话数达到该值的概率为 5%（校准锚点二）",
+      "value": 300000,
+      "unit": "会话/月",
+      "rationale": "约对应 5,000 美元/月；调研结论为'36–48 个月且多数站点永远达不到'，取 5%",
+      "low": 250000,
+      "high": 350000,
+      "note": ""
+    },
+    {
+      "id": "ramp_midpoint_months",
+      "claim": "流量爬坡的中点月份（logistic 曲线拐点）",
+      "value": 24,
+      "unit": "月",
+      "rationale": "调研给出 1,000 美元/月需 20–30 个月；取区间中值，按正态抖动 σ=6 个月",
+      "low": 18,
+      "high": 32,
+      "note": ""
+    },
+    {
+      "id": "ramp_steepness",
+      "claim": "流量爬坡陡度参数 k",
+      "value": 5.0,
+      "unit": "月",
+      "rationale": "使 10%→90% 爬坡约耗时 22 个月，与 YMYL 新域名的实际观测节奏一致",
+      "low": 3.0,
+      "high": 8.0,
+      "note": ""
+    },
+    {
+      "id": "algo_event_interval",
+      "claim": "算法更新事件的平均间隔",
+      "value": 1.75,
+      "unit": "月",
+      "rationale": "由 SOURCES.core_updates_28mo（28 个月 16 次）直接推得",
+      "low": 1.5,
+      "high": 2.5,
+      "note": ""
+    },
+    {
+      "id": "algo_shock_median",
+      "claim": "单次算法事件对可见度的中位乘数",
+      "value": 0.985,
+      "unit": "倍",
+      "rationale": "小型出版商长期承压：该中位数叠加事件频率后，年化中位拖累约 -10%，显著弱于 Chartbeat 观测到的 -60%，因为后者是存量站点且不含内容增量",
+      "low": 0.96,
+      "high": 1.0,
+      "note": ""
+    },
+    {
+      "id": "algo_shock_sigma",
+      "claim": "单次算法事件乘数的对数标准差",
+      "value": 0.16,
+      "unit": "-",
+      "rationale": "使约 5% 的事件造成 35% 以上的可见度损失，与 2026-03 更新中 24.1% 页面跌出前 100 的观测量级相容",
+      "low": 0.1,
+      "high": 0.25,
+      "note": ""
+    },
+    {
+      "id": "penalty_hazard_annual",
+      "claim": "遭遇人工处罚/大规模内容滥用判罚的年风险率",
+      "value": 0.06,
+      "unit": "/年",
+      "rationale": "全样本基准率为 1.9%（含大量人工站）；纯 AI 内容站的条件概率显著更高，本方案采用具名责任编辑与工具优先形态以压低该值，取 6% 并做敏感性",
+      "low": 0.02,
+      "high": 0.15,
+      "note": ""
+    },
+    {
+      "id": "penalty_traffic_residual",
+      "claim": "遭处罚后残余流量比例",
+      "value": 0.05,
+      "unit": "倍",
+      "rationale": "案例观测为整目录被移出索引，且 AI 引用同步消失",
+      "low": 0.01,
+      "high": 0.15,
+      "note": ""
+    },
+    {
+      "id": "penalty_recovery_prob",
+      "claim": "处罚后 12 个月内实质恢复的概率",
+      "value": 0.22,
+      "unit": "-",
+      "rationale": "Glenn Gabe 追踪的 HCU 受灾站中仅 22% 恢复了 20% 以上流量",
+      "low": 0.1,
+      "high": 0.35,
+      "note": ""
+    },
+    {
+      "id": "pages_per_session",
+      "claim": "每会话页面浏览数",
+      "value": 1.15,
+      "unit": "-",
+      "rationale": "工具型与查询型内容以单页即走为主；用于会话 RPM 与 PV RPM 的换算",
+      "low": 1.05,
+      "high": 1.4,
+      "note": ""
+    },
+    {
+      "id": "rpm_adsense",
+      "claim": "AdSense 阶段会话 RPM",
+      "value": 5.0,
+      "unit": "美元/千会话",
+      "rationale": "调研给出 3–8 美元区间，取中值",
+      "low": 3.0,
+      "high": 8.0,
+      "note": ""
+    },
+    {
+      "id": "rpm_journey",
+      "claim": "Journey by Mediavine 阶段会话 RPM",
+      "value": 8.5,
+      "unit": "美元/千会话",
+      "rationale": "调研给出 5–12 美元区间，取中值",
+      "low": 5.0,
+      "high": 12.0,
+      "note": ""
+    },
+    {
+      "id": "rpm_premium",
+      "claim": "Raptive / Mediavine Official 阶段会话 RPM（全年均值）",
+      "value": 19.0,
+      "unit": "美元/千会话",
+      "rationale": "调研中心估计 16–22 美元：政府福利类为低商业意图的信息型流量，不享有信用卡/保险类金融内容的溢价",
+      "low": 10.0,
+      "high": 30.0,
+      "note": ""
+    },
+    {
+      "id": "rpm_annual_decay",
+      "claim": "RPM 的年衰减率",
+      "value": 0.1,
+      "unit": "/年",
+      "rationale": "Mediavine 发布商报告同比 -30%，但恒定 -30% 不可持续；取 -10% 作为长期结构性下行",
+      "low": 0.0,
+      "high": 0.25,
+      "note": ""
+    },
+    {
+      "id": "b2b_arpa",
+      "claim": "B 端数据订阅的每账户月均收入",
+      "value": 79.0,
+      "unit": "美元/月",
+      "rationale": "面向 fintech、AI 应用与地方媒体的结构化数据订阅，定价在 29–199 美元区间取中枢；该价位使 Stripe 固定手续费占比降至 3% 以下，规避了 0.99 美元微支付的致命结构",
+      "low": 29.0,
+      "high": 199.0,
+      "note": ""
+    },
+    {
+      "id": "b2b_conv_per_10k_sessions",
+      "claim": "每 1 万月会话可转化的 B 端付费账户数",
+      "value": 0.35,
+      "unit": "个",
+      "rationale": "消费者流量作为 B 端的发现渠道，转化率低但稳定；无外部基准，属本模型最弱的假设之一，已纳入敏感性分析",
+      "low": 0.1,
+      "high": 1.0,
+      "note": ""
+    },
+    {
+      "id": "b2b_monthly_churn",
+      "claim": "B 端订阅月流失率",
+      "value": 0.05,
+      "unit": "-",
+      "rationale": "小微 B2B 数据订阅的常见量级",
+      "low": 0.03,
+      "high": 0.1,
+      "note": ""
+    },
+    {
+      "id": "b2b_ramp_start_month",
+      "claim": "B 端通道开始产生收入的月份",
+      "value": 13,
+      "unit": "月",
+      "rationale": "第一年用于把 50 州发放规则做成可信数据集，无可售之物",
+      "low": 9,
+      "high": 18,
+      "note": ""
+    },
+    {
+      "id": "b2b_inbound_per_month",
+      "claim": "不依赖消费者流量的 B 端月均自然获客数（目录、API 市场、开源渠道）",
+      "value": 0.15,
+      "unit": "个/月",
+      "rationale": "这是双通道方案真正的对冲价值所在：搜索流量归零时这条线仍在。泊松到达，稳态约 3 个账户；无外部基准，属弱假设",
+      "low": 0.05,
+      "high": 0.4,
+      "note": ""
+    },
+    {
+      "id": "p_sale_given_threshold",
+      "claim": "达到可挂牌门槛后 5 年内实际成交的概率",
+      "value": 0.75,
+      "unit": "-",
+      "rationale": "Empire Flippers 平均在市 101.8 天，但其自述会在估值前拒掉多数提交；含 AI 内容的资产平均多花 54% 时间才售出",
+      "low": 0.5,
+      "high": 0.9,
+      "note": ""
+    },
+    {
+      "id": "content_pages_total",
+      "claim": "五年内维护的页面总量",
+      "value": 900,
+      "unit": "页",
+      "rationale": "50 州 × 约 4 类页面 + 联邦付款日历 + Direct Express 过渡 + 长尾问答；刻意不做规模化铺量，因为大规模内容滥用政策与页面数无关而与意图有关",
+      "low": 400,
+      "high": 2000,
+      "note": ""
+    },
+    {
+      "id": "llm_cost_per_page_cycle",
+      "claim": "每页每次生成/更新的 LLM 成本",
+      "value": 0.03,
+      "unit": "美元",
+      "rationale": "取 DeepSeek 0.0024 与 Opus 0.085 之间的偏保守值，含四段式核验流水线",
+      "low": 0.0024,
+      "high": 0.085,
+      "note": ""
+    },
+    {
+      "id": "page_refresh_per_year",
+      "claim": "每页年均更新次数",
+      "value": 4,
+      "unit": "次/年",
+      "rationale": "发放日历按月变动，州规则按年变动；这是本产品准确性的核心成本",
+      "low": 2,
+      "high": 12,
+      "note": ""
+    },
+    {
+      "id": "compliance_legal_reserve",
+      "claim": "合规一次性支出（品牌与页面合规审查、条款与免责声明起草）",
+      "value": 800,
+      "unit": "美元",
+      "rationale": "第 1140 条按每次浏览计罚，品牌名、域名、视觉与页面文案必须在发布前定型，这是发布前必须花的钱，不是事后审计项",
+      "low": 300,
+      "high": 2500,
+      "note": ""
+    },
+    {
+      "id": "exit_multiple_base",
+      "claim": "退出倍数基准（已计入 AI 内容折让）",
+      "value": 14.0,
+      "unit": "×月净利",
+      "rationale": "Empire Flippers 30 万美元以下档为 22.42× 月净利；Motion Invest 实际成交显示含 AI 内容折让 39%，22.42 × 0.61 ≈ 13.7；B 端订阅收入占比可部分修复倍数",
+      "low": 11.0,
+      "high": 22.0,
+      "note": ""
+    },
+    {
+      "id": "exit_min_profit",
+      "claim": "存在买家的最低月净利门槛",
+      "value": 200.0,
+      "unit": "美元/月",
+      "rationale": "低于此规模的资产在主流经纪平台上基本无法挂牌成交",
+      "low": 100.0,
+      "high": 500.0,
+      "note": ""
+    },
+    {
+      "id": "exit_b2b_multiple_premium",
+      "claim": "B 端订阅收入部分的倍数溢价系数",
+      "value": 1.8,
+      "unit": "倍",
+      "rationale": "Acquire.com 已确认成交 SaaS 中位 3.9× 年净利，约为内容站 1.87× 的 2.1 倍；考虑到本方案 B 端体量小、客户集中，折半后取 1.8",
+      "low": 1.0,
+      "high": 2.5,
+      "note": ""
+    },
+    {
+      "id": "mc_paths",
+      "claim": "蒙特卡洛路径数",
+      "value": 20000,
+      "unit": "条",
+      "rationale": "在 3 秒内可完成且使各分位数稳定",
+      "low": null,
+      "high": null,
+      "note": ""
+    },
+    {
+      "id": "mc_horizon_months",
+      "claim": "模拟期长度",
+      "value": 60,
+      "unit": "月",
+      "rationale": "与 5 年收益率口径一致",
+      "low": null,
+      "high": null,
+      "note": ""
+    },
+    {
+      "id": "mc_seed",
+      "claim": "随机种子",
+      "value": 20260726,
+      "unit": "-",
+      "rationale": "固定种子以保证结论可复现",
+      "low": null,
+      "high": null,
+      "note": ""
+    }
+  ],
+  "charts": {
+    "kelly_curve_cash": [
+      {
+        "f": 0.0,
+        "growth": 0.0
+      },
+      {
+        "f": 0.00839,
+        "growth": 0.123567
+      },
+      {
+        "f": 0.01679,
+        "growth": 0.196129
+      },
+      {
+        "f": 0.02518,
+        "growth": 0.25328
+      },
+      {
+        "f": 0.03358,
+        "growth": 0.301703
+      },
+      {
+        "f": 0.04197,
+        "growth": 0.344273
+      },
+      {
+        "f": 0.05037,
+        "growth": 0.382554
+      },
+      {
+        "f": 0.05876,
+        "growth": 0.417514
+      },
+      {
+        "f": 0.06716,
+        "growth": 0.449803
+      },
+      {
+        "f": 0.07555,
+        "growth": 0.47988
+      },
+      {
+        "f": 0.08395,
+        "growth": 0.508088
+      },
+      {
+        "f": 0.09234,
+        "growth": 0.534689
+      },
+      {
+        "f": 0.10074,
+        "growth": 0.559889
+      },
+      {
+        "f": 0.10913,
+        "growth": 0.583853
+      },
+      {
+        "f": 0.11753,
+        "growth": 0.606718
+      },
+      {
+        "f": 0.12592,
+        "growth": 0.628595
+      },
+      {
+        "f": 0.13432,
+        "growth": 0.649579
+      },
+      {
+        "f": 0.14271,
+        "growth": 0.669751
+      },
+      {
+        "f": 0.15111,
+        "growth": 0.68918
+      },
+      {
+        "f": 0.1595,
+        "growth": 0.707926
+      },
+      {
+        "f": 0.1679,
+        "growth": 0.726042
+      },
+      {
+        "f": 0.17629,
+        "growth": 0.743574
+      },
+      {
+        "f": 0.18469,
+        "growth": 0.760562
+      },
+      {
+        "f": 0.19308,
+        "growth": 0.777043
+      },
+      {
+        "f": 0.20148,
+        "growth": 0.79305
+      },
+      {
+        "f": 0.20987,
+        "growth": 0.808612
+      },
+      {
+        "f": 0.21827,
+        "growth": 0.823754
+      },
+      {
+        "f": 0.22666,
+        "growth": 0.838502
+      },
+      {
+        "f": 0.23506,
+        "growth": 0.852877
+      },
+      {
+        "f": 0.24345,
+        "growth": 0.866898
+      },
+      {
+        "f": 0.25185,
+        "growth": 0.880585
+      },
+      {
+        "f": 0.26024,
+        "growth": 0.893953
+      },
+      {
+        "f": 0.26864,
+        "growth": 0.907018
+      },
+      {
+        "f": 0.27703,
+        "growth": 0.919794
+      },
+      {
+        "f": 0.28543,
+        "growth": 0.932295
+      },
+      {
+        "f": 0.29382,
+        "growth": 0.944532
+      },
+      {
+        "f": 0.30222,
+        "growth": 0.956517
+      },
+      {
+        "f": 0.31061,
+        "growth": 0.968261
+      },
+      {
+        "f": 0.31901,
+        "growth": 0.979773
+      },
+      {
+        "f": 0.3274,
+        "growth": 0.991062
+      },
+      {
+        "f": 0.3358,
+        "growth": 1.002137
+      },
+      {
+        "f": 0.34419,
+        "growth": 1.013006
+      },
+      {
+        "f": 0.35259,
+        "growth": 1.023676
+      },
+      {
+        "f": 0.36098,
+        "growth": 1.034155
+      },
+      {
+        "f": 0.36938,
+        "growth": 1.04445
+      },
+      {
+        "f": 0.37777,
+        "growth": 1.054566
+      },
+      {
+        "f": 0.38617,
+        "growth": 1.06451
+      },
+      {
+        "f": 0.39456,
+        "growth": 1.074288
+      },
+      {
+        "f": 0.40296,
+        "growth": 1.083903
+      },
+      {
+        "f": 0.41135,
+        "growth": 1.093363
+      },
+      {
+        "f": 0.41975,
+        "growth": 1.102671
+      },
+      {
+        "f": 0.42814,
+        "growth": 1.111831
+      },
+      {
+        "f": 0.43654,
+        "growth": 1.120849
+      },
+      {
+        "f": 0.44493,
+        "growth": 1.129728
+      },
+      {
+        "f": 0.45333,
+        "growth": 1.138472
+      },
+      {
+        "f": 0.46172,
+        "growth": 1.147085
+      },
+      {
+        "f": 0.47012,
+        "growth": 1.15557
+      },
+      {
+        "f": 0.47851,
+        "growth": 1.163931
+      },
+      {
+        "f": 0.48691,
+        "growth": 1.17217
+      },
+      {
+        "f": 0.4953,
+        "growth": 1.180291
+      },
+      {
+        "f": 0.5037,
+        "growth": 1.188297
+      },
+      {
+        "f": 0.51209,
+        "growth": 1.196191
+      },
+      {
+        "f": 0.52049,
+        "growth": 1.203975
+      },
+      {
+        "f": 0.52888,
+        "growth": 1.211651
+      },
+      {
+        "f": 0.53728,
+        "growth": 1.219222
+      },
+      {
+        "f": 0.54567,
+        "growth": 1.22669
+      },
+      {
+        "f": 0.55407,
+        "growth": 1.234058
+      },
+      {
+        "f": 0.56246,
+        "growth": 1.241328
+      },
+      {
+        "f": 0.57086,
+        "growth": 1.248501
+      },
+      {
+        "f": 0.57925,
+        "growth": 1.25558
+      },
+      {
+        "f": 0.58765,
+        "growth": 1.262566
+      },
+      {
+        "f": 0.59604,
+        "growth": 1.269461
+      },
+      {
+        "f": 0.60444,
+        "growth": 1.276266
+      },
+      {
+        "f": 0.61283,
+        "growth": 1.282984
+      },
+      {
+        "f": 0.62123,
+        "growth": 1.289616
+      },
+      {
+        "f": 0.62962,
+        "growth": 1.296162
+      },
+      {
+        "f": 0.63802,
+        "growth": 1.302626
+      },
+      {
+        "f": 0.64641,
+        "growth": 1.309007
+      },
+      {
+        "f": 0.65481,
+        "growth": 1.315307
+      },
+      {
+        "f": 0.6632,
+        "growth": 1.321528
+      },
+      {
+        "f": 0.6716,
+        "growth": 1.327669
+      },
+      {
+        "f": 0.67999,
+        "growth": 1.333733
+      },
+      {
+        "f": 0.68839,
+        "growth": 1.339721
+      },
+      {
+        "f": 0.69678,
+        "growth": 1.345632
+      },
+      {
+        "f": 0.70518,
+        "growth": 1.351469
+      },
+      {
+        "f": 0.71357,
+        "growth": 1.357231
+      },
+      {
+        "f": 0.72197,
+        "growth": 1.36292
+      },
+      {
+        "f": 0.73036,
+        "growth": 1.368535
+      },
+      {
+        "f": 0.73876,
+        "growth": 1.374079
+      },
+      {
+        "f": 0.74715,
+        "growth": 1.37955
+      },
+      {
+        "f": 0.75555,
+        "growth": 1.384951
+      },
+      {
+        "f": 0.76394,
+        "growth": 1.39028
+      },
+      {
+        "f": 0.77234,
+        "growth": 1.395538
+      },
+      {
+        "f": 0.78073,
+        "growth": 1.400725
+      },
+      {
+        "f": 0.78913,
+        "growth": 1.405842
+      },
+      {
+        "f": 0.79752,
+        "growth": 1.410888
+      },
+      {
+        "f": 0.80592,
+        "growth": 1.415863
+      },
+      {
+        "f": 0.81431,
+        "growth": 1.420767
+      },
+      {
+        "f": 0.82271,
+        "growth": 1.4256
+      },
+      {
+        "f": 0.8311,
+        "growth": 1.43036
+      },
+      {
+        "f": 0.8395,
+        "growth": 1.435048
+      },
+      {
+        "f": 0.84789,
+        "growth": 1.439662
+      },
+      {
+        "f": 0.85629,
+        "growth": 1.444201
+      },
+      {
+        "f": 0.86468,
+        "growth": 1.448665
+      },
+      {
+        "f": 0.87308,
+        "growth": 1.45305
+      },
+      {
+        "f": 0.88147,
+        "growth": 1.457355
+      },
+      {
+        "f": 0.88987,
+        "growth": 1.461577
+      },
+      {
+        "f": 0.89826,
+        "growth": 1.465714
+      },
+      {
+        "f": 0.90666,
+        "growth": 1.469761
+      },
+      {
+        "f": 0.91505,
+        "growth": 1.473714
+      },
+      {
+        "f": 0.92345,
+        "growth": 1.477567
+      },
+      {
+        "f": 0.93184,
+        "growth": 1.481313
+      },
+      {
+        "f": 0.94024,
+        "growth": 1.484942
+      },
+      {
+        "f": 0.94863,
+        "growth": 1.48844
+      },
+      {
+        "f": 0.95703,
+        "growth": 1.491791
+      },
+      {
+        "f": 0.96542,
+        "growth": 1.494967
+      },
+      {
+        "f": 0.97382,
+        "growth": 1.497928
+      },
+      {
+        "f": 0.98221,
+        "growth": 1.500601
+      },
+      {
+        "f": 0.99061,
+        "growth": 1.502822
+      },
+      {
+        "f": 0.999,
+        "growth": 1.503779
+      }
+    ],
+    "kelly_curve_full": [
+      {
+        "f": 0.0,
+        "growth": 0.0
+      },
+      {
+        "f": 0.00839,
+        "growth": -0.005116
+      },
+      {
+        "f": 0.01679,
+        "growth": -0.01056
+      },
+      {
+        "f": 0.02518,
+        "growth": -0.016216
+      },
+      {
+        "f": 0.03358,
+        "growth": -0.022039
+      },
+      {
+        "f": 0.04197,
+        "growth": -0.028003
+      },
+      {
+        "f": 0.05037,
+        "growth": -0.034094
+      },
+      {
+        "f": 0.05876,
+        "growth": -0.040302
+      },
+      {
+        "f": 0.06716,
+        "growth": -0.046619
+      },
+      {
+        "f": 0.07555,
+        "growth": -0.053041
+      },
+      {
+        "f": 0.08395,
+        "growth": -0.059564
+      },
+      {
+        "f": 0.09234,
+        "growth": -0.066183
+      },
+      {
+        "f": 0.10074,
+        "growth": -0.072898
+      },
+      {
+        "f": 0.10913,
+        "growth": -0.079707
+      },
+      {
+        "f": 0.11753,
+        "growth": -0.086607
+      },
+      {
+        "f": 0.12592,
+        "growth": -0.093599
+      },
+      {
+        "f": 0.13432,
+        "growth": -0.100682
+      },
+      {
+        "f": 0.14271,
+        "growth": -0.107855
+      },
+      {
+        "f": 0.15111,
+        "growth": -0.115118
+      },
+      {
+        "f": 0.1595,
+        "growth": -0.122472
+      },
+      {
+        "f": 0.1679,
+        "growth": -0.129916
+      },
+      {
+        "f": 0.17629,
+        "growth": -0.137451
+      },
+      {
+        "f": 0.18469,
+        "growth": -0.145078
+      },
+      {
+        "f": 0.19308,
+        "growth": -0.152797
+      },
+      {
+        "f": 0.20148,
+        "growth": -0.160608
+      },
+      {
+        "f": 0.20987,
+        "growth": -0.168514
+      },
+      {
+        "f": 0.21827,
+        "growth": -0.176514
+      },
+      {
+        "f": 0.22666,
+        "growth": -0.18461
+      },
+      {
+        "f": 0.23506,
+        "growth": -0.192803
+      },
+      {
+        "f": 0.24345,
+        "growth": -0.201093
+      },
+      {
+        "f": 0.25185,
+        "growth": -0.209484
+      },
+      {
+        "f": 0.26024,
+        "growth": -0.217975
+      },
+      {
+        "f": 0.26864,
+        "growth": -0.226569
+      },
+      {
+        "f": 0.27703,
+        "growth": -0.235266
+      },
+      {
+        "f": 0.28543,
+        "growth": -0.244069
+      },
+      {
+        "f": 0.29382,
+        "growth": -0.25298
+      },
+      {
+        "f": 0.30222,
+        "growth": -0.261999
+      },
+      {
+        "f": 0.31061,
+        "growth": -0.27113
+      },
+      {
+        "f": 0.31901,
+        "growth": -0.280374
+      },
+      {
+        "f": 0.3274,
+        "growth": -0.289734
+      },
+      {
+        "f": 0.3358,
+        "growth": -0.299211
+      },
+      {
+        "f": 0.34419,
+        "growth": -0.308808
+      },
+      {
+        "f": 0.35259,
+        "growth": -0.318527
+      },
+      {
+        "f": 0.36098,
+        "growth": -0.328371
+      },
+      {
+        "f": 0.36938,
+        "growth": -0.338342
+      },
+      {
+        "f": 0.37777,
+        "growth": -0.348443
+      },
+      {
+        "f": 0.38617,
+        "growth": -0.358678
+      },
+      {
+        "f": 0.39456,
+        "growth": -0.369048
+      },
+      {
+        "f": 0.40296,
+        "growth": -0.379558
+      },
+      {
+        "f": 0.41135,
+        "growth": -0.39021
+      },
+      {
+        "f": 0.41975,
+        "growth": -0.401008
+      },
+      {
+        "f": 0.42814,
+        "growth": -0.411955
+      },
+      {
+        "f": 0.43654,
+        "growth": -0.423055
+      },
+      {
+        "f": 0.44493,
+        "growth": -0.434313
+      },
+      {
+        "f": 0.45333,
+        "growth": -0.445731
+      },
+      {
+        "f": 0.46172,
+        "growth": -0.457314
+      },
+      {
+        "f": 0.47012,
+        "growth": -0.469066
+      },
+      {
+        "f": 0.47851,
+        "growth": -0.480993
+      },
+      {
+        "f": 0.48691,
+        "growth": -0.493098
+      },
+      {
+        "f": 0.4953,
+        "growth": -0.505388
+      },
+      {
+        "f": 0.5037,
+        "growth": -0.517866
+      },
+      {
+        "f": 0.51209,
+        "growth": -0.53054
+      },
+      {
+        "f": 0.52049,
+        "growth": -0.543413
+      },
+      {
+        "f": 0.52888,
+        "growth": -0.556494
+      },
+      {
+        "f": 0.53728,
+        "growth": -0.569787
+      },
+      {
+        "f": 0.54567,
+        "growth": -0.583299
+      },
+      {
+        "f": 0.55407,
+        "growth": -0.597039
+      },
+      {
+        "f": 0.56246,
+        "growth": -0.611012
+      },
+      {
+        "f": 0.57086,
+        "growth": -0.625227
+      },
+      {
+        "f": 0.57925,
+        "growth": -0.639692
+      },
+      {
+        "f": 0.58765,
+        "growth": -0.654415
+      },
+      {
+        "f": 0.59604,
+        "growth": -0.669407
+      },
+      {
+        "f": 0.60444,
+        "growth": -0.684675
+      },
+      {
+        "f": 0.61283,
+        "growth": -0.700231
+      },
+      {
+        "f": 0.62123,
+        "growth": -0.716086
+      },
+      {
+        "f": 0.62962,
+        "growth": -0.73225
+      },
+      {
+        "f": 0.63802,
+        "growth": -0.748736
+      },
+      {
+        "f": 0.64641,
+        "growth": -0.765557
+      },
+      {
+        "f": 0.65481,
+        "growth": -0.782727
+      },
+      {
+        "f": 0.6632,
+        "growth": -0.800259
+      },
+      {
+        "f": 0.6716,
+        "growth": -0.81817
+      },
+      {
+        "f": 0.67999,
+        "growth": -0.836477
+      },
+      {
+        "f": 0.68839,
+        "growth": -0.855197
+      },
+      {
+        "f": 0.69678,
+        "growth": -0.874349
+      },
+      {
+        "f": 0.70518,
+        "growth": -0.893953
+      },
+      {
+        "f": 0.71357,
+        "growth": -0.914033
+      },
+      {
+        "f": 0.72197,
+        "growth": -0.934611
+      },
+      {
+        "f": 0.73036,
+        "growth": -0.955713
+      },
+      {
+        "f": 0.73876,
+        "growth": -0.977366
+      },
+      {
+        "f": 0.74715,
+        "growth": -0.999601
+      },
+      {
+        "f": 0.75555,
+        "growth": -1.022451
+      },
+      {
+        "f": 0.76394,
+        "growth": -1.045951
+      },
+      {
+        "f": 0.77234,
+        "growth": -1.070139
+      },
+      {
+        "f": 0.78073,
+        "growth": -1.095058
+      },
+      {
+        "f": 0.78913,
+        "growth": -1.120756
+      },
+      {
+        "f": 0.79752,
+        "growth": -1.147282
+      },
+      {
+        "f": 0.80592,
+        "growth": -1.174695
+      },
+      {
+        "f": 0.81431,
+        "growth": -1.203058
+      },
+      {
+        "f": 0.82271,
+        "growth": -1.23244
+      },
+      {
+        "f": 0.8311,
+        "growth": -1.262921
+      },
+      {
+        "f": 0.8395,
+        "growth": -1.29459
+      },
+      {
+        "f": 0.84789,
+        "growth": -1.327547
+      },
+      {
+        "f": 0.85629,
+        "growth": -1.361907
+      },
+      {
+        "f": 0.86468,
+        "growth": -1.397799
+      },
+      {
+        "f": 0.87308,
+        "growth": -1.435375
+      },
+      {
+        "f": 0.88147,
+        "growth": -1.47481
+      },
+      {
+        "f": 0.88987,
+        "growth": -1.516309
+      },
+      {
+        "f": 0.89826,
+        "growth": -1.560115
+      },
+      {
+        "f": 0.90666,
+        "growth": -1.60652
+      },
+      {
+        "f": 0.91505,
+        "growth": -1.655875
+      },
+      {
+        "f": 0.92345,
+        "growth": -1.708616
+      },
+      {
+        "f": 0.93184,
+        "growth": -1.765288
+      },
+      {
+        "f": 0.94024,
+        "growth": -1.826588
+      },
+      {
+        "f": 0.94863,
+        "growth": -1.893434
+      },
+      {
+        "f": 0.95703,
+        "growth": -1.967074
+      },
+      {
+        "f": 0.96542,
+        "growth": -2.049283
+      },
+      {
+        "f": 0.97382,
+        "growth": -2.142738
+      },
+      {
+        "f": 0.98221,
+        "growth": -2.251871
+      },
+      {
+        "f": 0.99061,
+        "growth": -2.385294
+      },
+      {
+        "f": 0.999,
+        "growth": -2.569498
+      }
+    ],
+    "sessions_median_path": [
+      63.91489845644729,
+      75.5847965614403,
+      90.19647230423456,
+      108.74134149442928,
+      129.3100412780213,
+      153.2753693624555,
+      183.4976138091323,
+      219.82886626102902,
+      260.30731093315455,
+      308.3654728688463,
+      367.02857944649384,
+      434.58633321933155,
+      515.2844618702561,
+      605.445944422306,
+      712.243155587186,
+      836.4459604480086,
+      973.6113649132417,
+      1124.1753085365506,
+      1300.5268700983988,
+      1489.3116412386846,
+      1687.978037311474,
+      1895.4170205673067,
+      2111.6864354379722,
+      2337.2780872826206,
+      2562.5262993455444,
+      2779.199965109935,
+      2989.7546994254717,
+      3173.091724581818,
+      3346.8775280564514,
+      3510.528173965303,
+      3660.5603822744833,
+      3768.2482256184717,
+      3873.1294122927775,
+      3964.434089091731,
+      4031.8168069038056,
+      4076.886469197864,
+      4128.934113824443,
+      4118.776580355725,
+      4115.177860734856,
+      4121.350591389106,
+      4087.9925694763283,
+      4062.1292617637105,
+      4078.3569412669576,
+      4027.235803489689,
+      3935.6800502658693,
+      3892.05632925723,
+      3844.0040809556635,
+      3778.5793984542233,
+      3691.550989270608,
+      3615.783614553978,
+      3570.5737763935595,
+      3489.940450874189,
+      3423.477866858543,
+      3366.3729884529944,
+      3297.8997709059977,
+      3264.61857352378,
+      3199.707569671028,
+      3138.1781173164995,
+      3082.7363762603186,
+      3043.5887553661814
+    ],
+    "net_median_path": [
+      -58.088800055219636,
+      -58.33080851003551,
+      -58.55409917196019,
+      -58.76046303228118,
+      -58.95821877459174,
+      -59.1384436903614,
+      -59.28559740335373,
+      -59.40410284680367,
+      -59.496791595480275,
+      -59.54266372043416,
+      -59.535680634921626,
+      -59.48502280645991,
+      -59.67079083477714,
+      -55.151898913302006,
+      -42.20711915989816,
+      -5.586585160279743,
+      7.294524700031552,
+      11.409670795512632,
+      15.902315382447604,
+      30.935101271380958,
+      52.69944180772628,
+      61.46333255986662,
+      68.49393482732546,
+      76.76793198572693,
+      84.00266378559087,
+      94.88742483261129,
+      103.24826382945375,
+      110.3168881568333,
+      117.9755993080608,
+      124.03825692362797,
+      131.2960385340477,
+      137.20727607834186,
+      143.39513026559945,
+      149.00864964031754,
+      153.54587601822743,
+      157.79468161982496,
+      158.6204731428675,
+      163.44078686419363,
+      167.10923100519346,
+      170.34334613790583,
+      171.97199375245435,
+      174.82775292687714,
+      177.88306127775166,
+      179.69664526141426,
+      181.59729860242288,
+      184.3757612407873,
+      186.5217692018743,
+      187.25539282851292,
+      186.59890082691808,
+      187.55235066034814,
+      188.73734100125859,
+      189.81774299203312,
+      191.06057464174145,
+      192.0771787736019,
+      192.34385533135236,
+      192.31241474329153,
+      193.08819587282844,
+      193.99788730242813,
+      195.09615757079234,
+      195.4819030633471
+    ],
+    "net_p25_path": [
+      -58.378241714411494,
+      -58.67005643860749,
+      -58.96054959398056,
+      -59.24887265023052,
+      -59.53464963063598,
+      -59.81677940820922,
+      -60.097162029324295,
+      -60.37235458342947,
+      -60.64010324549954,
+      -60.89835102967771,
+      -61.152432091978554,
+      -61.39759686006008,
+      -61.66982118674354,
+      -61.59478965387896,
+      -61.25592239286502,
+      -60.404081603009615,
+      -58.40461612476694,
+      -49.29017260172755,
+      -35.17630213100473,
+      -7.750202095359439,
+      -4.747064922821158,
+      -1.4369176806260384,
+      3.1677244940145535,
+      7.720653958092914,
+      12.240824244768923,
+      23.32781530931112,
+      31.41278713533547,
+      36.7218547000398,
+      42.412069925405135,
+      47.582342688845095,
+      51.921530396884094,
+      56.8145573656339,
+      61.41070065742241,
+      66.26469529078146,
+      70.5155227131826,
+      73.63473137268304,
+      75.01660653259219,
+      78.94205218564963,
+      82.12502820238453,
+      84.08484640258,
+      86.98771767769725,
+      89.13896903218254,
+      91.89481975329792,
+      94.36527995830096,
+      96.98139599823836,
+      99.0950829683069,
+      100.97901482526851,
+      101.94540715147306,
+      101.90843436297324,
+      103.47229123330968,
+      104.14246312815212,
+      105.72846865602665,
+      107.23383930126434,
+      108.97936549862436,
+      110.73342907485774,
+      111.9409225556245,
+      112.55976401517867,
+      113.27095141776931,
+      113.77877033632696,
+      114.26989286361896
+    ],
+    "net_p75_path": [
+      -56.343074050502736,
+      -56.27444719281328,
+      -56.12482796657409,
+      -55.89184694919822,
+      -55.48580376366537,
+      -54.796749513062096,
+      -51.374534592961844,
+      -49.24523272950971,
+      -47.36782322992451,
+      -45.3834854100659,
+      -42.95344318209878,
+      -40.12534179997235,
+      -39.28826839602806,
+      14.141285435413671,
+      19.115240455013392,
+      40.2857262909647,
+      75.53630742790213,
+      85.59719547793298,
+      101.55691439984861,
+      125.66736961510198,
+      140.70309476287332,
+      156.61573547128518,
+      174.41307711783617,
+      191.39040167290887,
+      201.31582706681183,
+      220.07117261784327,
+      239.74816645782528,
+      252.23120720396085,
+      267.58800952535773,
+      285.09215669506625,
+      299.30097534441995,
+      313.23569422490607,
+      330.02659411611154,
+      344.68280058892265,
+      353.5697261388124,
+      366.3087752564943,
+      358.4696163554959,
+      363.0477944781802,
+      372.1083305144097,
+      375.9754772573797,
+      377.58915149290056,
+      379.0276598721986,
+      382.92065689910646,
+      382.8648834841821,
+      381.02596562497286,
+      379.115224295923,
+      378.71415198409863,
+      378.5570775125938,
+      365.33906674195043,
+      364.0207300923899,
+      364.84020406962543,
+      363.55905025584127,
+      360.84494446990414,
+      359.7397093069661,
+      356.42732369169926,
+      358.5445871824513,
+      356.3180007971319,
+      353.79627017850214,
+      355.0704086375934,
+      355.67832406572643
+    ],
+    "moic_hist": {
+      "counts": [
+        1030,
+        1578,
+        1956,
+        1974,
+        1557,
+        1164,
+        836,
+        629,
+        561,
+        485,
+        502,
+        469,
+        451,
+        420,
+        302,
+        300,
+        262,
+        241,
+        199,
+        143,
+        143,
+        138,
+        116,
+        104,
+        98,
+        93,
+        99,
+        78,
+        75,
+        78,
+        78,
+        74,
+        78,
+        65,
+        51,
+        62,
+        54,
+        60,
+        54,
+        3343
+      ],
+      "edges": [
+        0.0,
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0,
+        6.5,
+        7.0,
+        7.5,
+        8.0,
+        8.5,
+        9.0,
+        9.5,
+        10.0,
+        10.5,
+        11.0,
+        11.5,
+        12.0,
+        12.5,
+        13.0,
+        13.5,
+        14.0,
+        14.5,
+        15.0,
+        15.5,
+        16.0,
+        16.5,
+        17.0,
+        17.5,
+        18.0,
+        18.5,
+        19.0,
+        19.5,
+        20.0
+      ],
+      "clip": 20.0,
+      "share_above_clip_pct": 16.44
+    }
+  }
+}

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Build scratch & visual QA (regenerable)
+out/preview/
+out/_sheet*.png
+out/_preview*
+out/*.log
+out/e.txt
+out/fill.txt
+out/pdf_view.txt
+out/audit_err.txt
+out/audit_stdout.txt
+out/*_console.txt
+out_mc.txt
+out_ue.txt

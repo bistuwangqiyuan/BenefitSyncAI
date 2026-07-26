@@ -1,0 +1,1904 @@
+[
+ {
+  "kind": "results",
+  "path": "meta.data_as_of",
+  "text": "2026-07-26",
+  "value": "2026-07-26"
+ },
+ {
+  "kind": "results",
+  "path": "meta.generated_at",
+  "text": "2026-07-26 05:24",
+  "value": "2026-07-26 05:24"
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.paths",
+  "text": "20,000",
+  "value": 20000
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.months",
+  "text": "60",
+  "value": 60
+ },
+ {
+  "kind": "results",
+  "path": "ledger.n_sources",
+  "text": "108",
+  "value": 108
+ },
+ {
+  "kind": "results",
+  "path": "ledger.n_assumptions",
+  "text": "34",
+  "value": 34
+ },
+ {
+  "kind": "results",
+  "path": "ledger.share_primary_pct",
+  "text": "88.0",
+  "value": 88.0
+ },
+ {
+  "kind": "results",
+  "path": "meta.seed",
+  "text": "20,260,726",
+  "value": 20260726
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.paths",
+  "text": "20,000",
+  "value": 20000
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.win_rate_pct",
+  "text": "87.0",
+  "value": 86.96
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.expected_moic",
+  "text": "37.1",
+  "value": 37.059
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.annualized_pct",
+  "text": "106",
+  "value": 105.96
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.invested_cash_mean",
+  "text": "$2,228",
+  "value": 2228.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.founder_hours_5y",
+  "text": "5,200",
+  "value": 5200
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.breakeven_hourly_median",
+  "text": "$1.03",
+  "value": 1.03
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.breakeven_hourly_mean",
+  "text": "$10.27",
+  "value": 10.27
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.win_rate_pct",
+  "text": "87.0",
+  "value": 86.96
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.win_rate_full_cost_pct",
+  "text": "6.2",
+  "value": 6.21
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.founder_hours_5y",
+  "text": "5,200",
+  "value": 5200
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.breakeven_hourly_median",
+  "text": "1.03",
+  "value": 1.03
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.breakeven_hourly_mean",
+  "text": "10.27",
+  "value": 10.27
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.payoff_ratio",
+  "text": "95.7",
+  "value": 95.71
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.median_moic",
+  "text": "3.44",
+  "value": 3.436
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.expected_moic",
+  "text": "37.1",
+  "value": 37.059
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.p_reach_1k_pct",
+  "text": "18.2",
+  "value": 18.23
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.median_month_to_1k",
+  "text": "23",
+  "value": 23
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.p_penalized_pct",
+  "text": "27.1",
+  "value": 27.06
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.invested_cash_mean",
+  "text": "$2,228",
+  "value": 2228.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.founder_hours_5y",
+  "text": "5,200",
+  "value": 5200
+ },
+ {
+  "kind": "results",
+  "path": "kelly.breakeven_hourly.mean",
+  "text": "$10.27",
+  "value": 10.27
+ },
+ {
+  "kind": "source",
+  "path": "sources.sec1140_penalty",
+  "text": "13,132",
+  "value": 13132
+ },
+ {
+  "kind": "source",
+  "path": "sources.kw_zero_weeks",
+  "text": "50",
+  "value": 50
+ },
+ {
+  "kind": "source",
+  "path": "sources.orig_claimed_volume",
+  "text": "200,000",
+  "value": 200000
+ },
+ {
+  "kind": "results",
+  "path": "trends.weeks_observed",
+  "text": "53",
+  "value": 53
+ },
+ {
+  "kind": "results",
+  "path": "trends.weeks_at_zero",
+  "text": "50",
+  "value": 50
+ },
+ {
+  "kind": "results",
+  "path": "trends.weekly_mean_index",
+  "text": "1.98",
+  "value": 1.98
+ },
+ {
+  "kind": "results",
+  "path": "trends.peak_date",
+  "text": "2026-06-11",
+  "value": "2026-06-11"
+ },
+ {
+  "kind": "results",
+  "path": "trends.alive_days",
+  "text": "9",
+  "value": 9
+ },
+ {
+  "kind": "results",
+  "path": "trends.zero_since",
+  "text": "2026-06-19",
+  "value": "2026-06-19"
+ },
+ {
+  "kind": "source",
+  "path": "sources.kw_capture_day_decay",
+  "text": "67",
+  "value": 67
+ },
+ {
+  "kind": "source",
+  "path": "sources.kw_zero_weeks",
+  "text": "50",
+  "value": 50
+ },
+ {
+  "kind": "source",
+  "path": "sources.sec1140_penalty",
+  "text": "13,132",
+  "value": 13132
+ },
+ {
+  "kind": "source",
+  "path": "sources.sec1140_case_usafiling",
+  "text": "50,000",
+  "value": 50000
+ },
+ {
+  "kind": "source",
+  "path": "sources.sec1140_case_lexisnexis",
+  "text": "54,000",
+  "value": 54000
+ },
+ {
+  "kind": "source",
+  "path": "sources.sec1140_case_trak1",
+  "text": "103,950",
+  "value": 103950
+ },
+ {
+  "kind": "source",
+  "path": "sources.sec1140_case_lexisnexis",
+  "text": "54,000",
+  "value": 54000
+ },
+ {
+  "kind": "source",
+  "path": "sources.ssa_api_readonly",
+  "text": "5",
+  "value": 5
+ },
+ {
+  "kind": "source",
+  "path": "sources.ecbsv_cost",
+  "text": "5,100",
+  "value": 5100
+ },
+ {
+  "kind": "source",
+  "path": "sources.ssa_eft_mandate_1998",
+  "text": "1998-12",
+  "value": "1998-12"
+ },
+ {
+  "kind": "source",
+  "path": "sources.ssa_beneficiaries_total",
+  "text": "75,656,000",
+  "value": 75656000
+ },
+ {
+  "kind": "source",
+  "path": "sources.paper_check_recipients",
+  "text": "280,000",
+  "value": 280000
+ },
+ {
+  "kind": "source",
+  "path": "sources.eo_14247",
+  "text": "2025-03-25",
+  "value": "2025-03-25"
+ },
+ {
+  "kind": "source",
+  "path": "sources.orig_ltv_low",
+  "text": "1.12",
+  "value": 1.12
+ },
+ {
+  "kind": "source",
+  "path": "sources.orig_ltv_high",
+  "text": "827",
+  "value": 827
+ },
+ {
+  "kind": "results",
+  "path": "debunk.orig_ltv_ratio",
+  "text": "738",
+  "value": 738.0
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.criteria.demand.weight",
+  "text": "20%",
+  "value": 0.2
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.criteria.winnability.weight",
+  "text": "22%",
+  "value": 0.22
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.criteria.compliance.weight",
+  "text": "20%",
+  "value": 0.2
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.criteria.automation.weight",
+  "text": "14%",
+  "value": 0.14
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.criteria.unit_economics.weight",
+  "text": "14%",
+  "value": 0.14
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.criteria.exit.weight",
+  "text": "10%",
+  "value": 0.1
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.candidates[0].total",
+  "text": "7.62",
+  "value": 7.62
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.candidates[1].total",
+  "text": "6.62",
+  "value": 6.62
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.candidates[2].total",
+  "text": "6.54",
+  "value": 6.54
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.candidates[3].total",
+  "text": "5.54",
+  "value": 5.54
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.candidates[4].total",
+  "text": "2.54",
+  "value": 2.54
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.runner_up_gap",
+  "text": "1.00",
+  "value": 1.0
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.robustness.draws",
+  "text": "5,000",
+  "value": 5000
+ },
+ {
+  "kind": "results",
+  "path": "opportunity.robustness.champion_win_share_pct",
+  "text": "100.0",
+  "value": 100.0
+ },
+ {
+  "kind": "source",
+  "path": "sources.serp_ss_schedule_gov_share",
+  "text": "86",
+  "value": 86
+ },
+ {
+  "kind": "source",
+  "path": "sources.serp_snap_tx_gov_share",
+  "text": "11",
+  "value": 11
+ },
+ {
+  "kind": "source",
+  "path": "sources.propel_scale",
+  "text": "5,000,000",
+  "value": 5000000
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.micropayment[0].price",
+  "text": "$0.99",
+  "value": 0.99
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.micropayment[0].stripe_fee_pct",
+  "text": "33.2%",
+  "value": 33.2
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.micropayment[0].mor_fee_pct",
+  "text": "55.5%",
+  "value": 55.5
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.micropayment[1].price",
+  "text": "$2.99",
+  "value": 2.99
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.micropayment[1].stripe_fee_pct",
+  "text": "12.9%",
+  "value": 12.9
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.micropayment[1].mor_fee_pct",
+  "text": "21.7%",
+  "value": 21.7
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.micropayment[2].price",
+  "text": "$79.00",
+  "value": 79.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.micropayment[2].stripe_fee_pct",
+  "text": "3.3%",
+  "value": 3.3
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.micropayment[2].mor_fee_pct",
+  "text": "5.6%",
+  "value": 5.6
+ },
+ {
+  "kind": "source",
+  "path": "sources.stripe_fee_on_099",
+  "text": "33.2",
+  "value": 33.2
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.micropayment[0].mor_fee_pct",
+  "text": "55.5",
+  "value": 55.5
+ },
+ {
+  "kind": "source",
+  "path": "sources.orig_payment_cost_share",
+  "text": "11",
+  "value": 11
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.b2b_arpa",
+  "text": "$79",
+  "value": 79.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.micropayment[-1].stripe_fee_pct",
+  "text": "3.3",
+  "value": 3.3
+ },
+ {
+  "kind": "source",
+  "path": "sources.ezoic_threshold",
+  "text": "250,000",
+  "value": 250000
+ },
+ {
+  "kind": "source",
+  "path": "sources.adsense_revshare",
+  "text": "68",
+  "value": 68
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.rpm_adsense",
+  "text": "5.00",
+  "value": 5.0
+ },
+ {
+  "kind": "source",
+  "path": "sources.journey_threshold",
+  "text": "1,000",
+  "value": 1000
+ },
+ {
+  "kind": "source",
+  "path": "sources.journey_revshare",
+  "text": "70",
+  "value": 70
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.rpm_journey",
+  "text": "8.50",
+  "value": 8.5
+ },
+ {
+  "kind": "source",
+  "path": "sources.raptive_threshold",
+  "text": "25,000",
+  "value": 25000
+ },
+ {
+  "kind": "source",
+  "path": "sources.mediavine_official_threshold",
+  "text": "$5,000",
+  "value": 5000
+ },
+ {
+  "kind": "source",
+  "path": "sources.raptive_revshare",
+  "text": "75",
+  "value": 75
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.rpm_premium",
+  "text": "19.00",
+  "value": 19.0
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.rpm_annual_decay",
+  "text": "10%",
+  "value": 0.1
+ },
+ {
+  "kind": "source",
+  "path": "sources.mediavine_rpm_yoy",
+  "text": "30",
+  "value": -30
+ },
+ {
+  "kind": "source",
+  "path": "sources.raptive_threshold",
+  "text": "25,000",
+  "value": 25000
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.rpm_journey",
+  "text": "8.50",
+  "value": 8.5
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.rpm_premium",
+  "text": "19.00",
+  "value": 19.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.fixed_monthly_cost.infra",
+  "text": "$5.87",
+  "value": 5.87
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.fixed_monthly_cost.tooling",
+  "text": "$52.25",
+  "value": 52.25
+ },
+ {
+  "kind": "source",
+  "path": "sources.ahrefs_starter",
+  "text": "$29",
+  "value": 29.0
+ },
+ {
+  "kind": "source",
+  "path": "sources.screaming_frog",
+  "text": "$279",
+  "value": 279.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.fixed_monthly_cost.llm",
+  "text": "$9.00",
+  "value": 9.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.pages",
+  "text": "900",
+  "value": 900
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.page_refresh_per_year",
+  "text": "4",
+  "value": 4
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.llm_cost_per_page_cycle",
+  "text": "$0.030",
+  "value": 0.03
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.fixed_monthly_cost.total",
+  "text": "$67.12",
+  "value": 67.12
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.one_time_total",
+  "text": "$1,310.44",
+  "value": 1310.44
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.compliance_legal_reserve",
+  "text": "$800",
+  "value": 800
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.breakeven_sessions",
+  "text": "6,006",
+  "value": 6006.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.p_cash_exhausted_pct",
+  "text": "0.00",
+  "value": 0.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[0].sessions",
+  "text": "500",
+  "value": 500
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[0].rpm",
+  "text": "$5.00",
+  "value": 5.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[0].ad_revenue",
+  "text": "$2",
+  "value": 2.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[0].b2b_revenue",
+  "text": "$1",
+  "value": 1.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[0].cost",
+  "text": "$67",
+  "value": 67.17
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[0].net",
+  "text": "$-63",
+  "value": -63.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[1].sessions",
+  "text": "1,000",
+  "value": 1000
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[1].rpm",
+  "text": "$8.50",
+  "value": 8.5
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[1].ad_revenue",
+  "text": "$8",
+  "value": 8.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[1].b2b_revenue",
+  "text": "$3",
+  "value": 3.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[1].cost",
+  "text": "$67",
+  "value": 67.21
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[1].net",
+  "text": "$-56",
+  "value": -56.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[2].sessions",
+  "text": "5,000",
+  "value": 5000
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[2].rpm",
+  "text": "$8.50",
+  "value": 8.5
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[2].ad_revenue",
+  "text": "$42",
+  "value": 42.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[2].b2b_revenue",
+  "text": "$14",
+  "value": 14.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[2].cost",
+  "text": "$68",
+  "value": 67.57
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[2].net",
+  "text": "$-11",
+  "value": -11.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[3].sessions",
+  "text": "25,000",
+  "value": 25000
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[3].rpm",
+  "text": "$19.00",
+  "value": 19.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[3].ad_revenue",
+  "text": "$475",
+  "value": 475.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[3].b2b_revenue",
+  "text": "$69",
+  "value": 69.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[3].cost",
+  "text": "$69",
+  "value": 69.39
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[3].net",
+  "text": "$475",
+  "value": 475.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[4].sessions",
+  "text": "50,000",
+  "value": 50000
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[4].rpm",
+  "text": "$19.00",
+  "value": 19.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[4].ad_revenue",
+  "text": "$950",
+  "value": 950.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[4].b2b_revenue",
+  "text": "$138",
+  "value": 138.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[4].cost",
+  "text": "$72",
+  "value": 71.65
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[4].net",
+  "text": "$1,017",
+  "value": 1017.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[5].sessions",
+  "text": "150,000",
+  "value": 150000
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[5].rpm",
+  "text": "$19.00",
+  "value": 19.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[5].ad_revenue",
+  "text": "$2,850",
+  "value": 2850.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[5].b2b_revenue",
+  "text": "$415",
+  "value": 415.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[5].cost",
+  "text": "$81",
+  "value": 80.72
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[5].net",
+  "text": "$3,184",
+  "value": 3184.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[6].sessions",
+  "text": "300,000",
+  "value": 300000
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[6].rpm",
+  "text": "$19.00",
+  "value": 19.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[6].ad_revenue",
+  "text": "$5,700",
+  "value": 5700.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[6].b2b_revenue",
+  "text": "$830",
+  "value": 830.0
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[6].cost",
+  "text": "$94",
+  "value": 94.33
+ },
+ {
+  "kind": "results",
+  "path": "unit_economics.ladder[6].net",
+  "text": "$6,435",
+  "value": 6435.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.paths",
+  "text": "20,000",
+  "value": 20000
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.months",
+  "text": "60",
+  "value": 60
+ },
+ {
+  "kind": "source",
+  "path": "sources.core_updates_28mo",
+  "text": "16",
+  "value": 16
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.algo_event_interval",
+  "text": "1.75",
+  "value": 1.75
+ },
+ {
+  "kind": "source",
+  "path": "sources.march2026_fell_out_top100",
+  "text": "24.1",
+  "value": 24.1
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.mature_sessions_p22",
+  "text": "50,000",
+  "value": 50000
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.mature_sessions_p5",
+  "text": "300,000",
+  "value": 300000
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.calibration.median_mature_sessions",
+  "text": "10,242",
+  "value": 10242
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.p_reach_1k_pct",
+  "text": "18.2",
+  "value": 18.23
+ },
+ {
+  "kind": "source",
+  "path": "sources.chartbeat_small_pub_decline",
+  "text": "60",
+  "value": -60
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.win_rate_pct",
+  "text": "86.96",
+  "value": 86.96
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.payoff_ratio",
+  "text": "95.7",
+  "value": 95.71
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.expected_moic",
+  "text": "37.06",
+  "value": 37.059
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.median_moic",
+  "text": "3.44",
+  "value": 3.436
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.annualized_pct",
+  "text": "106.0",
+  "value": 105.96
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.median_annualized_pct",
+  "text": "28.0",
+  "value": 28.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.annualized_full_cost_pct",
+  "text": "-15.8",
+  "value": -15.81
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.p_total_loss_pct",
+  "text": "0.03",
+  "value": 0.03
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.invested_cash_mean",
+  "text": "$2,228",
+  "value": 2228.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.expected_moic",
+  "text": "37.06",
+  "value": 37.059
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.median_moic",
+  "text": "3.44",
+  "value": 3.436
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.moic_percentiles.p99",
+  "text": "583",
+  "value": 583.418
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[4].median_net_month",
+  "text": "$195",
+  "value": 195.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.sessions_p50_final",
+  "text": "3,043",
+  "value": 3043
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.sessions_p90_final",
+  "text": "68,905",
+  "value": 68905
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[0].roi",
+  "text": "-47.6%",
+  "value": -47.61
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[0].annualized",
+  "text": "-47.6%",
+  "value": -47.61
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[0].roi_full_cost",
+  "text": "-97.5%",
+  "value": -97.47
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[0].annualized_full_cost",
+  "text": "-97.5%",
+  "value": -97.47
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[0].median_net_month",
+  "text": "$-59",
+  "value": -59.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[1].roi",
+  "text": "266.6%",
+  "value": 266.6
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[1].annualized",
+  "text": "91.5%",
+  "value": 91.47
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[1].roi_full_cost",
+  "text": "-90.4%",
+  "value": -90.41
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[1].annualized_full_cost",
+  "text": "-69.0%",
+  "value": -69.04
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[1].median_net_month",
+  "text": "$77",
+  "value": 77.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[2].roi",
+  "text": "983.6%",
+  "value": 983.58
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[2].annualized",
+  "text": "121.3%",
+  "value": 121.29
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[2].roi_full_cost",
+  "text": "-80.2%",
+  "value": -80.15
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[2].annualized_full_cost",
+  "text": "-41.7%",
+  "value": -41.67
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[2].median_net_month",
+  "text": "$158",
+  "value": 158.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[3].roi",
+  "text": "1,865.7%",
+  "value": 1865.69
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[3].annualized",
+  "text": "110.6%",
+  "value": 110.56
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[3].roi_full_cost",
+  "text": "-72.4%",
+  "value": -72.36
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[3].annualized_full_cost",
+  "text": "-27.5%",
+  "value": -27.49
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[3].median_net_month",
+  "text": "$187",
+  "value": 187.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[4].roi",
+  "text": "3,605.9%",
+  "value": 3605.86
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[4].annualized",
+  "text": "106.0%",
+  "value": 105.96
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[4].roi_full_cost",
+  "text": "-57.7%",
+  "value": -57.72
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[4].annualized_full_cost",
+  "text": "-15.8%",
+  "value": -15.81
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[4].median_net_month",
+  "text": "$195",
+  "value": 195.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.breakeven_hourly_median",
+  "text": "$1.03",
+  "value": 1.03
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.breakeven_hourly_mean",
+  "text": "$10.27",
+  "value": 10.27
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.founder_hourly_cost",
+  "text": "$25",
+  "value": 25
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.p_beat_hourly_cost_pct",
+  "text": "6.27",
+  "value": 6.27
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.cash_budget",
+  "text": "$6,000",
+  "value": 6000
+ },
+ {
+  "kind": "results",
+  "path": "kelly.cash_basis.f_star",
+  "text": "0.998",
+  "value": 0.9978
+ },
+ {
+  "kind": "results",
+  "path": "kelly.cash_basis.half_kelly",
+  "text": "0.499",
+  "value": 0.4989
+ },
+ {
+  "kind": "results",
+  "path": "kelly.cash_basis.f_star_amount",
+  "text": "$5,987",
+  "value": 5987.0
+ },
+ {
+  "kind": "results",
+  "path": "kelly.cash_basis.half_kelly_amount",
+  "text": "$2,993",
+  "value": 2993.0
+ },
+ {
+  "kind": "results",
+  "path": "kelly.full_cost_basis.f_star",
+  "text": "0.000",
+  "value": 0.0
+ },
+ {
+  "kind": "results",
+  "path": "kelly.full_cost_basis.half_kelly",
+  "text": "0.000",
+  "value": 0.0
+ },
+ {
+  "kind": "results",
+  "path": "kelly.naive_two_point.f_naive",
+  "text": "0.868",
+  "value": 0.8682
+ },
+ {
+  "kind": "results",
+  "path": "kelly.naive_two_point.p",
+  "text": "0.870",
+  "value": 0.8696
+ },
+ {
+  "kind": "results",
+  "path": "kelly.naive_two_point.b",
+  "text": "95.71",
+  "value": 95.713
+ },
+ {
+  "kind": "results",
+  "path": "kelly.cash_basis.half_kelly_amount",
+  "text": "$2,993",
+  "value": 2993.0
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[0].low_metric",
+  "text": "$-0.18",
+  "value": -0.18
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[0].high_metric",
+  "text": "$5.29",
+  "value": 5.29
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[0].swing",
+  "text": "$5.47",
+  "value": 5.47
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[1].low_metric",
+  "text": "$-0.21",
+  "value": -0.21
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[1].high_metric",
+  "text": "$5.10",
+  "value": 5.1
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[1].swing",
+  "text": "$5.31",
+  "value": 5.31
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[2].low_metric",
+  "text": "$0.72",
+  "value": 0.72
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[2].high_metric",
+  "text": "$1.36",
+  "value": 1.36
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[2].swing",
+  "text": "$0.64",
+  "value": 0.64
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[3].low_metric",
+  "text": "$0.79",
+  "value": 0.79
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[3].high_metric",
+  "text": "$1.25",
+  "value": 1.25
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[3].swing",
+  "text": "$0.46",
+  "value": 0.46
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[4].low_metric",
+  "text": "$1.13",
+  "value": 1.13
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[4].high_metric",
+  "text": "$0.78",
+  "value": 0.78
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[4].swing",
+  "text": "$0.35",
+  "value": 0.35
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[5].low_metric",
+  "text": "$1.14",
+  "value": 1.14
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[5].high_metric",
+  "text": "$0.80",
+  "value": 0.8
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[5].swing",
+  "text": "$0.34",
+  "value": 0.34
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[6].low_metric",
+  "text": "$1.13",
+  "value": 1.13
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[6].high_metric",
+  "text": "$0.84",
+  "value": 0.84
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[6].swing",
+  "text": "$0.29",
+  "value": 0.29
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[7].low_metric",
+  "text": "$0.89",
+  "value": 0.89
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[7].high_metric",
+  "text": "$1.09",
+  "value": 1.09
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[7].swing",
+  "text": "$0.20",
+  "value": 0.2
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[8].low_metric",
+  "text": "$1.05",
+  "value": 1.05
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[8].high_metric",
+  "text": "$0.91",
+  "value": 0.91
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[8].swing",
+  "text": "$0.14",
+  "value": 0.14
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[9].low_metric",
+  "text": "$0.97",
+  "value": 0.97
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[9].high_metric",
+  "text": "$1.04",
+  "value": 1.04
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[9].swing",
+  "text": "$0.07",
+  "value": 0.07
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[10].low_metric",
+  "text": "$0.96",
+  "value": 0.96
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[10].high_metric",
+  "text": "$0.99",
+  "value": 0.99
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[10].swing",
+  "text": "$0.03",
+  "value": 0.03
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[11].low_metric",
+  "text": "$0.97",
+  "value": 0.97
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[11].high_metric",
+  "text": "$0.98",
+  "value": 0.98
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.rows[11].swing",
+  "text": "$0.01",
+  "value": 0.01
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.tornado.base",
+  "text": "$0.98",
+  "value": 0.98
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[0].win_rate_full_cost_pct",
+  "text": "1.15%",
+  "value": 1.15
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[0].median_moic",
+  "text": "0.17×",
+  "value": 0.174
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[0].breakeven_hourly_median",
+  "text": "$-0.50",
+  "value": -0.5
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[0].breakeven_hourly_mean",
+  "text": "$1.05",
+  "value": 1.05
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[0].p_reach_1k_pct",
+  "text": "4.2%",
+  "value": 4.22
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[1].win_rate_full_cost_pct",
+  "text": "5.72%",
+  "value": 5.72
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[1].median_moic",
+  "text": "3.35×",
+  "value": 3.351
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[1].breakeven_hourly_median",
+  "text": "$0.98",
+  "value": 0.98
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[1].breakeven_hourly_mean",
+  "text": "$7.97",
+  "value": 7.97
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[1].p_reach_1k_pct",
+  "text": "18.3%",
+  "value": 18.33
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[2].win_rate_full_cost_pct",
+  "text": "21.02%",
+  "value": 21.02
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[2].median_moic",
+  "text": "21.65×",
+  "value": 21.654
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[2].breakeven_hourly_median",
+  "text": "$7.74",
+  "value": 7.74
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[2].breakeven_hourly_mean",
+  "text": "$29.30",
+  "value": 29.3
+ },
+ {
+  "kind": "results",
+  "path": "sensitivity.scenarios[2].p_reach_1k_pct",
+  "text": "48.4%",
+  "value": 48.38
+ },
+ {
+  "kind": "source",
+  "path": "sources.sec1140_penalty",
+  "text": "13,132",
+  "value": 13132
+ },
+ {
+  "kind": "source",
+  "path": "sources.ftc_impersonation_rule",
+  "text": "53,088",
+  "value": 53088
+ },
+ {
+  "kind": "source",
+  "path": "sources.w8ben_default_withholding",
+  "text": "30",
+  "value": 30
+ },
+ {
+  "kind": "source",
+  "path": "sources.w8ben_default_withholding",
+  "text": "30",
+  "value": 30
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.compliance_legal_reserve",
+  "text": "$800",
+  "value": 800
+ },
+ {
+  "kind": "results",
+  "path": "roadmap.phases[0].hours",
+  "text": "160",
+  "value": 160
+ },
+ {
+  "kind": "source",
+  "path": "sources.domain_cost",
+  "text": "$10",
+  "value": 10.44
+ },
+ {
+  "kind": "results",
+  "path": "roadmap.phases[0].hours",
+  "text": "160",
+  "value": 160
+ },
+ {
+  "kind": "results",
+  "path": "roadmap.phases[1].hours",
+  "text": "607",
+  "value": 607
+ },
+ {
+  "kind": "source",
+  "path": "sources.journey_threshold",
+  "text": "1,000",
+  "value": 1000
+ },
+ {
+  "kind": "results",
+  "path": "roadmap.phases[2].hours",
+  "text": "1,300",
+  "value": 1300
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.b2b_arpa",
+  "text": "$79",
+  "value": 79.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.median_month_to_1k",
+  "text": "23",
+  "value": 23
+ },
+ {
+  "kind": "results",
+  "path": "roadmap.phases[3].hours",
+  "text": "3,120",
+  "value": 3120
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.exit_multiple_base",
+  "text": "14",
+  "value": 14.0
+ },
+ {
+  "kind": "source",
+  "path": "sources.ef_under300k_monthly",
+  "text": "22.42",
+  "value": 22.42
+ },
+ {
+  "kind": "source",
+  "path": "sources.ai_content_discount",
+  "text": "39",
+  "value": 39
+ },
+ {
+  "kind": "assumption",
+  "path": "assumptions.exit_multiple_base",
+  "text": "14",
+  "value": 14.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.p_total_loss_pct",
+  "text": "0.03",
+  "value": 0.03
+ },
+ {
+  "kind": "results",
+  "path": "kelly.breakeven_hourly.mean",
+  "text": "$10.27",
+  "value": 10.27
+ },
+ {
+  "kind": "results",
+  "path": "kelly.breakeven_hourly.median",
+  "text": "$1.03",
+  "value": 1.03
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.yearly[4].median_net_month",
+  "text": "$195",
+  "value": 195.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.realized_median",
+  "text": "$7,573",
+  "value": 7573.0
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.p_reach_5k_pct",
+  "text": "5.2",
+  "value": 5.21
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.p_total_loss_pct",
+  "text": "0.03",
+  "value": 0.03
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.p_cash_exhausted_pct",
+  "text": "0.00",
+  "value": 0.0
+ },
+ {
+  "kind": "source",
+  "path": "sources.propel_scale",
+  "text": "5,000,000",
+  "value": 5000000
+ },
+ {
+  "kind": "source",
+  "path": "sources.serp_snap_tx_gov_share",
+  "text": "11",
+  "value": 11
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.breakeven_hourly_median",
+  "text": "$1.03",
+  "value": 1.03
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.founder_hours_5y",
+  "text": "5,200",
+  "value": 5200
+ },
+ {
+  "kind": "source",
+  "path": "sources.zero_click_2026",
+  "text": "68.01",
+  "value": 68.01
+ },
+ {
+  "kind": "source",
+  "path": "sources.aio_ctr_drop_pos1",
+  "text": "58",
+  "value": 58.0
+ },
+ {
+  "kind": "source",
+  "path": "sources.aio_prevalence_edu_finance",
+  "text": "91",
+  "value": 91
+ },
+ {
+  "kind": "source",
+  "path": "sources.pew_click_inside_aio",
+  "text": "1",
+  "value": 1
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.founder_hours_5y",
+  "text": "5,200",
+  "value": 5200
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.realized_median",
+  "text": "$7,573",
+  "value": 7573.0
+ },
+ {
+  "kind": "results",
+  "path": "roadmap.phases[0].hours",
+  "text": "160",
+  "value": 160
+ },
+ {
+  "kind": "results",
+  "path": "roadmap.remaining_after_gate1",
+  "text": "5,027",
+  "value": 5027
+ },
+ {
+  "kind": "results",
+  "path": "meta.seed",
+  "text": "20,260,726",
+  "value": 20260726
+ },
+ {
+  "kind": "results",
+  "path": "meta.python",
+  "text": "3.12.10",
+  "value": "3.12.10"
+ },
+ {
+  "kind": "results",
+  "path": "meta.numpy",
+  "text": "2.5.1",
+  "value": "2.5.1"
+ },
+ {
+  "kind": "results",
+  "path": "monte_carlo.paths",
+  "text": "20,000",
+  "value": 20000
+ },
+ {
+  "kind": "results",
+  "path": "ledger.n_sources",
+  "text": "108",
+  "value": 108
+ },
+ {
+  "kind": "results",
+  "path": "ledger.share_primary_pct",
+  "text": "88.0",
+  "value": 88.0
+ }
+]

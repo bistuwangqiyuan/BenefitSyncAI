@@ -1,0 +1,16 @@
+{
+  "weeks_observed": 53,
+  "weeks_at_zero": 50,
+  "weekly_mean_index": 1.98,
+  "alive_days": 9,
+  "peak_date": "2026-06-11",
+  "zero_since": "2026-06-19",
+  "provenance": [
+    "live_fetch"
+  ],
+  "status": {
+    "weekly": "live_fetch",
+    "daily": "live_fetch",
+    "errors": []
+  }
+}

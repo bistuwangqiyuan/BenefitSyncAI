@@ -1,0 +1,143 @@
+﻿类型,编号,论断,数值,单位,发布方/推理,URL,置信度,取数日期,备注
+来源,kw_zero_weeks,锚点热词近 53 周中取值为 0 的周数,50,周,本项目 Google Trends 实测,https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update,A,2026-07-26,美国区 2025-07-20 至 2026-07-19 周粒度，实时抓取可复现（model/fetch_trends.py）；非零周仅 3 个：06-07=100、06-14=4、06-21=1。前置调研口头汇报的'46 周'与其自列的非零周清单相矛盾，以本次实抓数据为准
+来源,kw_total_weeks,锚点热词观测总周数,53,周,本项目 Google Trends 实测,https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update,A,2026-07-26,
+来源,kw_12mo_avg,锚点热词近 12 个月平均热度（满分 100）,1.98,指数,本项目 Google Trends 实测,https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update,A,2026-07-26,
+来源,kw_alive_days,锚点热词从起量到归零的存活天数,9,天,本项目 Google Trends 实测（日粒度）,https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update,A,2026-07-26,2026-06-10 起量，06-11 峰值，06-19 起归零
+来源,kw_peak_date,锚点热词峰值日,2026-06-11,日期,本项目 Google Trends 实测,https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update,A,2026-07-26,与 USA TODAY 报道 SSA 全面电子化同日
+来源,kw_zero_since,锚点热词归零起始日,2026-06-19,日期,本项目 Google Trends 实测,https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update,A,2026-07-26,
+来源,kw_capture_day_decay,原计划书采集日（06-12）相对峰值的衰减,67,%,本项目 Google Trends 实测,https://trends.google.com/trends/explore?geo=US&q=social%20security%20electronic%20benefits%20update,A,2026-07-26,峰值 100 → 采集日 33
+来源,kw_peak_vs_head,锚点热词历史峰值 vs 头部词 social security 的相对量级,9,指数(对方=100),本项目 Google Trends 实测,https://trends.google.com/trends/explore?geo=US&q=social%20security,A,2026-07-26,
+来源,trends_bucket_nature,Trending Now 的搜索量为短窗口分桶标签而非月均搜索量,bucketed,定性,Google Trends 官方说明 / Trending Now,https://support.google.com/trends/answer/4365533,A,2026-07-26,原计划书把 24 小时分桶标签 200K+ 当作月均量并乘季节系数
+来源,usatoday_trigger,触发热词的新闻源：USA TODAY 报道 SSA 年内完成全面电子化,2026-06-11,日期,USA TODAY,https://www.usatoday.com/story/money/2026/06/11/social-security-benefits-electronic-payment/90506560007/,A,2026-07-26,
+来源,ssa_account_no_proxy,SSA 规定：任何人不得代他人创建或使用 my Social Security 账户，即使有书面或口头授权,"No one can create or use an account on your behalf, even with your written or verbal permission",条文,美国社会保障署 SSA,https://www.ssa.gov/myaccount/create.html,A,2026-07-26,
+来源,logingov_no_automation,Login.gov 规则：严禁自动化访问（含自动认证、表单提交）,Automated access to Login.gov is strictly prohibited,条文,Login.gov,https://www.login.gov/policy/rules-of-use/,A,2026-07-26,
+来源,ssa_tos_federal_crime,SSA 服务条款：就个人身份欺骗社会保障署属联邦犯罪,federal crime to deceive the SSA about an individual's identity,条文,美国社会保障署 SSA,https://www.ssa.gov/help/di/TOS.html,A,2026-07-26,
+来源,sec1140_penalty,《社会保障法》第 1140 条：违规通信罚金，网站按每次浏览单独计罚,13132,美元/次浏览,SSA 监察长办公室 OIG,https://oig.ssa.gov/fraud-reporting/consumer-protection-section-1140/,A,2026-07-26,"each viewing of the website is subject to a separate penalty；广播按每次播出 65,653 美元"
+来源,sec1140_statute,第 1140 条法条本身（42 U.S.C. §1320b-10），涵盖任何互联网或电子通信,42 U.S.C. 1320b-10,法条,Cornell LII,https://www.law.cornell.edu/uscode/text/42/1320b-10,A,2026-07-26,
+来源,sec1140_case_usafiling,第 1140 条实际和解案例：对社保卡收费网站,50000,美元,SSA OIG,https://oig.ssa.gov/news-releases/2019-09-19-newsroom-news-releases-company-pays-50000-penalty-settle-claim-misleading-consumers-social-security/,A,2026-07-26,
+来源,sec1140_case_lexisnexis,第 1140 条实际和解案例：LexisNexis 因产品命名暗示与 SSA 直连,54000,美元,SSA OIG,https://oig.ssa.gov/news-releases/2018-10-23-newsroom-news-releases-oct23-1140-settlement/,A,2026-07-26,并下架该产品；该公司本身拥有合法 CBSV 权限，仍因'如何描述'被罚
+来源,sec1140_case_trak1,第 1140 条实际和解案例：背景调查公司使用 SSA 徽标,103950,美元,SSA OIG,https://oig.ssa.gov/news-releases/2019-08-27-newsroom-news-releases-background-screening-companies-agree-pay-103950-penalty-settle-claim-they/,A,2026-07-26,
+来源,ssa_fee_authorization,42 U.S.C. §406(a)(5)：未经授权收取超额代理费为轻罪,"misdemeanor, fine up to $500 or imprisonment up to 1 year",法条,美国法典,https://uscode.house.gov/view.xhtml?req=%28title%3A42+section%3A406+edition%3Aprelim%29,A,2026-07-26,
+来源,ftc_impersonation_rule,FTC 政府冒充规则（16 CFR Part 461，2024-04-01 生效）民事罚金上限,53088,美元/次违规,美国联邦贸易委员会 FTC,https://www.ecfr.gov/current/title-16/chapter-I/subchapter-D/part-461,A,2026-07-26,含'by implication'暗示性冒充；首年即关停 13 个网站
+来源,ftc_citizens_disability,FTC/DOJ 诉 Citizens Disability（2025-09-30 和解）：SSDI 外呼营销,1000000,美元(实付),美国联邦贸易委员会 FTC,https://www.ftc.gov/news-events/news/press-releases/2025/09/citizens-disability-pay-1-million-over-ftc-charges-it-made-tens-millions-illegal-misleading-calls,A,2026-07-26,判罚 200 万、实付 100 万；1.09 亿次外呼含 2570 万次拨往 DNC 名单
+来源,ssa_beneficiaries_total,SSA 受益人总数（2026 年 6 月）,75656000,人,SSA Quick Facts,https://www.ssa.gov/policy/docs/quickfacts/stat_snapshot/,A,2026-07-26,原计划书称 5200 万，低估约 2360 万
+来源,paper_check_recipients,仍领纸质支票的受益人（2026 年）,280000,人,The Hill / Nexstar,https://thehill.com/business/personal-finance/5906488-social-security-is-fully-doing-away-with-paper-checks-how-to-prepare/,B,2026-07-26,占全部受益人不足 1%，且随电子化推进主动归零
+来源,eo_14247,第 14247 号行政令：2025-09-30 起联邦支付停止签发纸质支票,2025-03-25,日期,白宫,https://www.whitehouse.gov/presidential-actions/2025/03/modernizing-payments-to-and-from-americas-bank-account/,A,2026-07-26,
+来源,ssa_no_annual_update,SSA 明确：受益人无需为继续领取按期联系 SSA（不存在'年度电子更新'义务）,No. You do not need to contact Social Security to continue your monthly benefits,条文,SSA,https://www.ssa.gov/news/en/identity-proofing.html,A,2026-07-26,
+来源,ssa_eft_mandate_1998,电子支付强制要求的真实起点（非 2024 年 1 月）,1998-12,日期,SSA Handbook §122.2,https://www.ssa.gov/OP_Home/handbook/handbook.01/handbook-0122.html,A,2026-07-26,
+来源,ssa_1199_scope,SSA-1199 系列为境外居住受益人的国际直存表，无 -BK 变体,International Direct Deposit,定性,SSA,https://www.ssa.gov/forms/ssa-1199.html,A,2026-07-26,
+来源,ssa_api_readonly,SSA 公开 API 仅 5 个只读 ArcGIS 统计/地址接口，无交易类接口,5,个,SSA Open Data,https://www.ssa.gov/data/OASDIBenefitPaymentsByState.htm,A,2026-07-26,不存在 /v1/receipt 端点
+来源,ecbsv_cost,eCBSV（唯一的认证类数据交换）最低年费，且仅限 GLBA 金融机构用于授信场景,5100,美元/年,SSA,https://www.ssa.gov/dataexchange/eCBSV/,A,2026-07-26,
+来源,propel_blocked,先例：Conduent 单方切断 Propel 对州级 EBT 系统的抓取访问,约 80% 用户受影响,定性,纽约时报,https://www.nytimes.com/2018/04/23/technology/start-up-fight-poverty-food-stamp-giant-blocking-it.html,A,2026-07-26,Propel 有 8000 万美元融资仍被切断；本方案据此不做任何抓取式代登录
+来源,ssa_oig_free_warning,SSA OIG 公开警告：社保卡相关服务免费，无需使用收费的第三方网站,You ARE NOT required to use one of these services,条文,SSA OIG,https://oig.ssa.gov/scam-alerts/2026-03-10-ssa-provides-new-and-replacement-social-security-cards-for-free/,A,2026-07-26,
+来源,orig_claimed_volume,原方案宣称的锚点热词搜索量（实为 Trending Now 的 24 小时分桶标签）,200000,次,原方案文档（本仓库存档）,file:googletrendhot.txt,A,2026-07-26,"原文写作 200,000+ 并据此乘季节系数外推为月均量；分桶性质见 trends_bucket_nature"
+来源,orig_ltv_low,原方案表格中的 LTV 之一,1.12,美元,原方案文档（本仓库存档）,file:googletrendhot.txt,A,2026-07-26,与 orig_ltv_high 出自同一份文档，两者相差约 738 倍
+来源,orig_ltv_high,原方案表格中的 LTV 之二,827,美元,原方案文档（本仓库存档）,file:googletrendhot.txt,A,2026-07-26,原文以此值支撑营收预测，同时又在另一处使用 1.12 美元
+来源,orig_payment_cost_share,原方案假设的支付与云成本合计占收入比,11,%,原方案文档（本仓库存档）,file:googletrendhot.txt,A,2026-07-26,仅 Stripe 对 0.99 美元客单价的固定费就已达 33.2%
+来源,ahrefs_top10_1yr_all,新发布页面一年内进入前 10 的比例（全样本 100 万 URL）,1.74,%,Ahrefs,https://ahrefs.com/blog/how-long-does-it-take-to-rank-in-google-and-how-old-are-top-ranking-pages/,A,2026-07-26,
+来源,ahrefs_top10_1yr_english,同上，过滤为非空英文内容后的比例（200 万 URL）,6.11,%,Ahrefs,https://ahrefs.com/blog/how-long-does-it-take-to-rank-in-google-and-how-old-are-top-ranking-pages/,A,2026-07-26,
+来源,ahrefs_top10_highvol,新页面一年内为高搜索量词进入前 10 的比例,0.3,%,Ahrefs,https://ahrefs.com/blog/how-long-does-it-take-to-rank-in-google-and-how-old-are-top-ranking-pages/,A,2026-07-26,
+来源,ahrefs_winner_within_1mo,在进入前 10 的少数页面中，首月即达成的占比,40.82,%,Ahrefs,https://ahrefs.com/blog/how-long-does-it-take-to-rank-in-google-and-how-old-are-top-ranking-pages/,A,2026-07-26,排名突破是双峰分布：早期不破则大概率永不破
+来源,ahrefs_top1_age,排名第 1 的页面平均年龄,5,年,Ahrefs,https://ahrefs.com/blog/how-long-does-it-take-to-rank-in-google-and-how-old-are-top-ranking-pages/,A,2026-07-26,
+来源,aio_ctr_drop_pos1,AI Overview 使第 1 位自然点击率下降幅度（2026-12 复测）,58.0,%,Ahrefs,https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/,A,2026-07-26,2025-03 首测为 34.5%，一年内恶化
+来源,aio_prevalence_edu_finance,教育型金融查询触发 AI Overview 的比例,91,%,BrightEdge,https://www.brightedge.com/resources/weekly-ai-search-insights/google-ymyl-finance-ai-overviews,B,2026-07-26,
+来源,pew_click_with_aio,出现 AI 摘要时用户点击自然结果的访问占比,8,%,Pew Research Center,https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/,A,2026-07-26,"n=900 名美国成年人真实浏览行为，68,879 次查询"
+来源,pew_click_without_aio,无 AI 摘要时用户点击自然结果的访问占比,15,%,Pew Research Center,https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/,A,2026-07-26,
+来源,pew_click_inside_aio,点击 AI 摘要内部引用链接的访问占比,1,%,Pew Research Center,https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/,A,2026-07-26,被 AI 引用 ≠ 拿到流量；'成为 AI 引用源'不是可行的流量战略
+来源,zero_click_2026,美国 Google 搜索中未产生任何点击的比例（2026 年 1–4 月）,68.01,%,SparkToro / Similarweb,https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/,A,2026-07-26,2024 年为 60.45%
+来源,chartbeat_small_pub_decline,日均 1 万 PV 以下小型出版商 2025 年搜索流量变化,-60,%,Chartbeat（经 Press Gazette 报道）,https://pressgazette.co.uk/media-audience-and-business-data/us-publishers-see-traffic-boost-for-breaking-news-from-google-discover/,A,2026-07-26,10 万 PV 以上为 -22%；越小跌得越狠，新站起步即在最差分档
+来源,define_evergreen_decline,大型出版商常青型内容（指南/解释/测评）自 2024-11 以来的搜索流量变化,-40,%,Define Media Group（64 家出版商面板，经 Press Gazette 报道）,https://pressgazette.co.uk/media-audience-and-business-data/us-publishers-see-traffic-boost-for-breaking-news-from-google-discover/,A,2026-07-26,
+来源,core_updates_28mo,2024-03 至 2026-06 期间 Google 确认的排名系统更新次数,16,次,Google Search Status Dashboard,https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history,A,2026-07-26,平均每 7–8 周一次，属不可对冲的经常性风险
+来源,march2026_fell_out_top100,2026-03 核心更新后原前 10 页面跌出前 100 的比例,24.1,%,SE Ranking（经 Search Engine Land 报道）,https://searchengineland.com/march-2026-google-core-update-what-changed-474397,A,2026-07-26,
+来源,sistrix_winners,2026-03 核心更新的赢家画像：官方与机构、专业垂直、成熟品牌；输家：聚合站与比价站,"official/institutional, specialist, established brands",定性,Aleyda Solis / Sistrix（经 Search Engine Land 报道）,https://searchengineland.com/march-2026-google-core-update-what-changed-474397,B,2026-07-26,Census.gov、BLS.gov 在事实型查询上显著获益
+来源,scaled_content_policy,Google 反垃圾政策：大规模内容滥用与生成方式无关，仅看意图与价值,"no matter whether content is produced through automation, human efforts, or some combination",条文,Google Search Central,https://developers.google.com/search/blog/2024/03/core-update-spam-policies,A,2026-07-26,
+来源,spam_policy_covers_ai_answers,2026-05-15 起 Google 反垃圾政策明确覆盖生成式 AI 回答,or attempting to manipulate generative AI responses in Google Search,条文,Google（经 Search Engine Land 报道）,https://searchengineland.com/google-updates-search-spam-policies-to-clarify-it-applies-to-generative-ai-responses-477657,A,2026-07-26,GEO/AI 引用优化同样在处罚范围内，不存在政策真空区
+来源,qrg_ymyl_anonymous_lowest,质量评估指南：YMYL 页面若完全没有网站或内容创作者信息，应判 Lowest,YMYL pages or websites ... with absolutely no information about the website or content creator should be rated Lowest,条文,Google 搜索质量评估指南（2025-09-11 版）,https://static.googleusercontent.com/media/guidelines.raterhub.com/uk//searchqualityevaluatorguidelines.pdf,A,2026-07-26,
+来源,qrg_suspect_scaled_lowest,质量评估指南：即便无法确认生成方式，只要强烈怀疑大规模内容滥用即判 Lowest,Even if you are unsure of the method of creation ... you should still use the Lowest rating when you strongly suspect scaled content abuse,条文,Google 搜索质量评估指南（2025-09-11 版）,https://static.googleusercontent.com/media/guidelines.raterhub.com/uk//searchqualityevaluatorguidelines.pdf,A,2026-07-26,
+来源,qrg_expert_paraphrase_ok,质量评估指南留出的合规窗口：由专家把政府政策改写为易懂语言是有价值的,when an expert paraphrases the contents of a government policy in easy-to-understand language,条文,Google 搜索质量评估指南（2025-09-11 版）,https://static.googleusercontent.com/media/guidelines.raterhub.com/uk//searchqualityevaluatorguidelines.pdf,A,2026-07-26,关键词是 expert：必须有具名且可核验的责任人
+来源,adsense_couples_search_spam,Google 发布商政策：不得在违反搜索反垃圾政策的页面投放广告,must not place Google-served ads on screens that violate the Spam policies for Google web search,条文,Google Publisher Policies,https://support.google.com/adsense/answer/10502938,A,2026-07-26,同一次违规会同时消灭流量与收入，两大风险高度相关
+来源,manual_action_base_rate,2024-03 核心更新中被完全移除索引的广告网络站点占比,1.9,%,Originality.ai（约 7.9 万站样本）,https://originality.ai/can-google-detect-penalize-ai-content,B,2026-07-26,"独立复核为 1.7%（Ian Nuttall，49,345 站）；这是全样本基准率，纯 AI 站条件概率显著更高"
+来源,deindexed_ai_share,被移除索引站点中可判定发布过 AI 内容的比例,86,%,"Originality.ai（175 站、30,614 URL 抽样）",https://originality.ai/can-google-detect-penalize-ai-content,B,2026-07-26,151/175；其中 51/175 约 30% 为 95% 以上纯 AI 生成
+来源,google_us_share,Google 在美国搜索市场的份额（2026-06）,86.67,%,StatCounter,https://gs.statcounter.com/search-engine-market-share/all/united-states-of-america/,A,2026-07-26,
+来源,ai_chatbot_referral_share,四大 AI 聊天机器人合计带来的搜索引荐流量份额（2026-05）,0.29,%,Cloudflare Radar 数据（二手转引）,https://technologychecker.io/blog/search-engine-market-share,C,2026-07-26,精确小数不可靠，但'AI 渠道几乎不导流'的方向被 Ahrefs 与 SparkToro 独立佐证
+来源,serp_ss_schedule_gov_share,查询 social security payment schedule 2026 首页 7 条结果中 ssa.gov 占比,86,%,本项目 SERP 实测（美国区，2026-07-26）,https://www.google.com/search?q=social+security+payment+schedule+2026&gl=us,A,2026-07-26,6/7 为 ssa.gov，唯一非政府结果是 AARP；独立站无机会
+来源,serp_snap_tx_gov_share,查询 SNAP EBT deposit dates Texas 首页 9 条结果中 .gov 占比,11,%,本项目 SERP 实测（美国区，2026-07-26）,https://www.google.com/search?q=SNAP+EBT+deposit+dates+Texas&gl=us,A,2026-07-26,1/9；独立站 snapscreener.com 排名第 1 且被 AI Overview 引用，foodstampsneed.com 第 5
+来源,serp_tool_beats_article,在 YMYL 福利类查询中胜出的独立站形态为工具（资格自查/到账日计算），而非文章,calculator/screener outranks .gov,定性,本项目 SERP 实测（美国区，2026-07-26）,https://www.google.com/search?q=what+is+the+income+limit+for+medicaid&gl=us,A,2026-07-26,snapscreener.com 位列 3 个 .gov 域名之上
+来源,serp_geo_personalized,美国福利类查询高度按 IP 地理个性化，全国性内容站需与 50 套州级机构竞争,state-localized,定性,本项目 SERP 实测（美国区，2026-07-26）,https://www.google.com/search?q=how+to+apply+for+snap+benefits&gl=us,A,2026-07-26,
+来源,propel_scale,Propel（EBT 余额与到账查询）月活用户规模，验证该需求真实存在,5000000,人,Propel,https://www.propel.app/blog/is-propel-a-scam/,B,2026-07-26,约每 4 个美国 SNAP 家庭有 1 个在用；对用户免费，靠广告与 interchange
+来源,free_to_user_pattern,该赛道所有已成规模的运营者无一例外对受益人免费,Propel / SNAP Screener / BenefitsUSA / WhenIsMyCheck / FoodStampsNeed,定性,本项目竞品核验,https://www.snapscreener.com/about,A,2026-07-26,变现来自广告、赞助、interchange 或 B2B 转介；无一向受益人收费
+来源,direct_express_migration,Direct Express 发卡行由 Comerica 迁移至 Fifth Third，过渡沟通计划于 2026 年中,~3.4M cardholders,定性,SSA PolicyNet EM-26005 REV,https://secure.ssa.gov/apps10/reference.nsf/links/05182026111816AM,A,2026-07-26,真实、有明确日期、影响约 340 万人的信息缺口
+来源,benefitscalculus_nonexistent,原计划书所列竞品 BenefitsCalculus.com 域名未注册,NXDOMAIN,定性,本项目权威 DNS 查询（8.8.8.8）,https://dns.google/query?name=benefitscalculus.com,A,2026-07-26,
+来源,ezoic_threshold,Ezoic 自 2026-02-19 起的准入门槛（对新站实质关闭）,250000,月活用户,Ezoic,https://osticket.ezoic.com/kb/article/getting-started-ezoics-requirements?lang=en_US,A,2026-07-26,Incubator 每月全球仅收 20 家且不放宽流量要求；'先长到 5 万会话再进 Mediavine'的旧路径已失效
+来源,journey_threshold,Journey by Mediavine 准入门槛,1000,会话/月,Mediavine,https://help.mediavine.com/what-does-it-take-to-get-approved-by-mediavine,A,2026-07-26,
+来源,journey_revshare,Journey by Mediavine 发布商分成,70,%,Mediavine,https://journeymv.zendesk.com/hc/en-us/articles/23783857493787-Revenue-Share,A,2026-07-26,
+来源,raptive_threshold,Raptive 准入门槛,25000,页面浏览/月,Raptive,https://raptive.com/blog/opening-the-door-to-more-creators-who-meet-raptive-quality-standards/,A,2026-07-26,并要求 50% 以上流量来自美加英澳新
+来源,raptive_revshare,Raptive 发布商分成,75,%,Raptive,https://raptive.com/reach-your-full-potential-with-raptive/,A,2026-07-26,
+来源,mediavine_official_threshold,Mediavine Official 准入门槛（改为收入门槛，非流量门槛）,5000,美元/年广告收入,Mediavine,https://help.mediavine.com/revenue-share,A,2026-07-26,
+来源,adsense_revshare,Google AdSense 展示广告发布商分成,68,%,Google AdSense,https://support.google.com/adsense/answer/9724?hl=en,A,2026-07-26,
+来源,mediavine_rpm_yoy,Mediavine 发布商 2025 年末至 2026 年初报告的 RPM 同比变化,-30,%,Empire Flippers 2026 State of the Industry Report,https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf,B,2026-07-26,RPM 应按下行建模，不能按持平
+来源,seniors_smartphone,65 岁以上美国人智能手机拥有率（低于 50 岁以下的 97%）,78,%,"Pew Research Center NPORS 2025 (n=5,022)",https://www.pewresearch.org/internet/fact-sheet/mobile/?menuItem=13d95e33-8fb8-45ef-938e-d22b96c7206e,A,2026-07-26,目标人群桌面占比偏高，对 RPM 略为有利
+来源,domain_cost,Cloudflare Registrar .com 年费（按成本价）,10.44,美元/年,Cloudflare Registrar,https://www.cloudflare.com/products/registrar/,C,2026-07-26,按 Verisign 批发价 10.26 + ICANN 0.18 重构；2026-11-01 起批发价升至 10.97
+来源,cloudflare_workers_paid,Cloudflare Workers 付费计划起步价（RAG 需要，Free 档 10ms CPU 不够）,5.0,美元/月,Cloudflare,https://developers.cloudflare.com/workers/platform/pricing/,A,2026-07-26,
+来源,cloudflare_pages_bandwidth,Cloudflare Pages 静态带宽与请求计费方式,unmetered,定性,Cloudflare,https://pages.cloudflare.com/,A,2026-07-26,1 万 / 10 万 / 100 万 PV 三档成本均为 5 美元/月，带宽不计费
+来源,infra_floor,Cloudflare 技术栈固定月成本下限（域名摊销+Pages+D1+R2+Resend+Sentry+BetterStack+Workers）,5.87,美元/月,本项目按各厂商官方定价页汇总,https://developers.cloudflare.com/workers/platform/pricing/,A,2026-07-26,
+来源,ahrefs_starter,Ahrefs Starter 档月费（2026-01 新增，Semrush 无对标档位）,29.0,美元/月,Ahrefs,https://ahrefs.com/pricing,A,2026-07-26,
+来源,screaming_frog,Screaming Frog SEO Spider 年费,279.0,美元/年,Screaming Frog,https://www.screamingfrog.co.uk/seo-spider/pricing/,A,2026-07-26,
+来源,llm_1000_articles_cheap,生成并核验 1000 篇 1500 词内容的 LLM 成本（DeepSeek V4-Flash + 缓存）,2.38,美元,本项目按厂商官方费率测算，见 research/cost_model.py,https://api-docs.deepseek.com/quick_start/pricing,A,2026-07-26,四段式流水线：提纲/初稿/修订/事实核查，共 1 万输入+5600 输出 token 每篇
+来源,llm_1000_articles_frontier,同上，改用前沿模型（Claude Opus 4.8 + 缓存 + 批处理）,85.28,美元,本项目按厂商官方费率测算，见 research/cost_model.py,https://platform.claude.com/docs/en/about-claude/pricing,A,2026-07-26,LLM 成本在本量级不构成约束；真正的约束是每周 20 小时的人工核验时间
+来源,stripe_fee,Stripe 美国本土卡费率,2.9% + $0.30,费率,Stripe,https://stripe.com/pricing,A,2026-07-26,
+来源,stripe_fee_on_099,0.99 美元定价被 Stripe 手续费吃掉的收入比例,33.2,%,本项目按 Stripe 官方费率测算,https://stripe.com/pricing,A,2026-07-26,Paddle/Lemon Squeezy 为 55.6%；原计划书假设的合计成本仅 11%
+来源,stripe_atlas,Stripe Atlas 一次性建司费用（含无需 SSN 获取 EIN）,500,美元,Stripe Atlas,https://docs.stripe.com/atlas/signup,A,2026-07-26,次年起注册代理 100 美元/年
+来源,w8ben_default_withholding,未提交 W-8BEN 时美国来源 FDAP 所得的预扣税率,30,%,美国国税局 IRS,https://www.irs.gov/instructions/iw8ben,A,2026-07-26,
+来源,services_income_sourcing,劳务所得按'劳务发生地'定源：完全在美国境外提供的服务为外国来源,IRC 862(a)(3),法条,美国国税局 IRS,https://www.irs.gov/individuals/international-taxpayers/nonresident-aliens-sourcing-of-income,A,2026-07-26,广告与联盟收入通常按劳务定性；若被定性为特许权使用费则改按'使用地'定源并预扣
+来源,ef_under300k_monthly,Empire Flippers 2025 实际成交：30 万美元以下资产倍数,22.42,×月净利,Empire Flippers 2026 State of the Industry Report,https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf,A,2026-07-26,"n=129，占全部成交 77.7%，平均成交价 91,098 美元；折合 1.87× 年净利"
+来源,ef_avg_2025,Empire Flippers 2025 全部成交平均倍数（较 2024 年下降 10.1%）,23.93,×月净利,Empire Flippers 2026 State of the Industry Report,https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf,A,2026-07-26,
+来源,ef_distressed,Empire Flippers 困境资产挂牌倍数,13.7,×月净利,Empire Flippers 2026 State of the Industry Report,https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf,A,2026-07-26,
+来源,ef_typical,Empire Flippers 典型质量档挂牌倍数,27.8,×月净利,Empire Flippers 2026 State of the Industry Report,https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf,A,2026-07-26,
+来源,ef_display_share,展示广告类资产在 Empire Flippers 2025 成交中的占比,13.3,%,Empire Flippers 2026 State of the Industry Report,https://info.empireflippers.com/hubfs/2026%20Lead%20Magnets/2026%20State%20of%20the%20Industry%20Report.pdf,A,2026-07-26,报告原话：许多知名联盟 SEO 玩家已完全退出
+来源,ai_content_discount,含 AI 内容的站点相对纯人工内容站点的成交价折让,39,%,Originality.AI 分析 Motion Invest 12 个月实际成交数据,https://originality.ai/blog/ai-website-sales-study,A,2026-07-26,AI 内容站 1.5× 年营收 vs 人工 2.1×；且多花 19 天（+54%）才售出
+来源,flippa_content_annual,Flippa H1 2026：内容站平均倍数（前四分位 4.68×）,2.32,×年净利,Flippa,https://flippa.com/blog/digital-ma-insights-h1-2026/,A,2026-07-26,
+来源,acquire_saas_annual,Acquire.com 已确认成交的 SaaS 中位数倍数（2024 与 2025 均为此值）,3.9,×年净利,Acquire.com Biannual Acquisition Multiples Report (2026-01),https://blog.acquire.com/acquire-com-biannual-acquisition-multiples-report-jan-2026/,A,2026-07-26,B 端订阅型资产较内容型资产有约 45% 溢价，是本方案设置 B 端通道的估值理由之一
+来源,bls_survival_5yr,美国新建企业 5 年存活率（BLS 完整队列均值）,51.5,%,美国劳工统计局 BLS Business Employment Dynamics Table 7,https://www.bls.gov/bdm/us_age_naics_00_table7.txt,A,2026-07-26,BLS 仅统计有雇员的经营单位，单人无雇员企业基本不在此口径内，51.5% 应视为上界
+来源,bls_survival_1yr,美国新建企业 1 年存活率,80.1,%,BLS Table 7,https://www.bls.gov/bdm/us_age_naics_00_table7.txt,A,2026-07-26,
+来源,bls_survival_2yr,美国新建企业 2 年存活率,71.2,%,BLS Table 7,https://www.bls.gov/bdm/us_age_naics_00_table7.txt,A,2026-07-26,
+来源,bls_survival_3yr,美国新建企业 3 年存活率,63.8,%,BLS Table 7,https://www.bls.gov/bdm/us_age_naics_00_table7.txt,A,2026-07-26,
+来源,bls_survival_4yr,美国新建企业 4 年存活率,57.0,%,BLS Table 7,https://www.bls.gov/bdm/us_age_naics_00_table7.txt,A,2026-07-26,
+来源,correlation_below_1x,风险投资基准：未能返还 1 倍本金的融资占比,65.0,%,"Correlation Ventures（21,640 笔美国风险融资，2004–2013）",https://sethlevine.com/archives/2014/08/venture-outcomes-are-even-more-skewed-than-you-think.html,C,2026-07-26,原始研究从未直接公开，所有引用均可追溯至同一转述；仅作对照基准
+来源,microconf_under_1k_mrr,独立 SaaS 中月经常性收入低于 1000 美元的占比（最大单一群体）,28,%,MicroConf State of Independent SaaS 2024 (n=469),https://microconf.com/state-of-independent-saas,D,2026-07-26,自选择样本；分母不含从未上线即放弃的项目，真实无条件比例更差
+来源,indie_reach_1k_mrr,已上线的独立项目达到 1000 美元/月的概率区间,20–30,%,MicroConf 2024 与 RockingWeb 2025 两项自选择调查的交叉推断,https://microconf.com/state-of-independent-saas,D,2026-07-26,仅用于校准蒙特卡洛的成熟流量分布，不作为结论直接引用
+来源,indie_never_5k,已上线的独立项目从未达到 5000 美元/月的比例,82,%,"RockingWeb 2025 (n=1,000)",https://rockingweb.com/indie-hackers-statistics,D,2026-07-26,
+假设,cash_budget,创始人可投入的自有现金上限,6000,美元,"用户给定区间 2,000–10,000 美元，取中值建模；超出即判定为'无法继续注资'而失败",,假设,2026-07-26,敏感性区间 2000 ~ 10000
+假设,weekly_hours,每周可投入工时,20,小时/周,用户给定硬约束,,假设,2026-07-26,敏感性区间 15 ~ 25
+假设,founder_hourly_cost,创始人时间的机会成本单价,25,美元/小时,无法从外部来源确定个人机会成本，取一个保守的可自证时薪；本项目将现金口径与含时间成本的全成本口径分别列示，避免只报现金 ROI 造成的系统性高估,,假设,2026-07-26,敏感性区间 10 ~ 60
+假设,mature_sessions_p22,成熟期月会话数达到该值的概率为 22%（校准锚点一）,50000,会话/月,"50,000 会话/月约对应 1,000 美元/月广告收入；用已上线独立项目达到 1k MRR 的 20–30% 区间下沿偏中位置作为校准点",,假设,2026-07-26,敏感性区间 40000 ~ 60000
+假设,mature_sessions_p5,成熟期月会话数达到该值的概率为 5%（校准锚点二）,300000,会话/月,"约对应 5,000 美元/月；调研结论为'36–48 个月且多数站点永远达不到'，取 5%",,假设,2026-07-26,敏感性区间 250000 ~ 350000
+假设,ramp_midpoint_months,流量爬坡的中点月份（logistic 曲线拐点）,24,月,"调研给出 1,000 美元/月需 20–30 个月；取区间中值，按正态抖动 σ=6 个月",,假设,2026-07-26,敏感性区间 18 ~ 32
+假设,ramp_steepness,流量爬坡陡度参数 k,5.0,月,使 10%→90% 爬坡约耗时 22 个月，与 YMYL 新域名的实际观测节奏一致,,假设,2026-07-26,敏感性区间 3.0 ~ 8.0
+假设,algo_event_interval,算法更新事件的平均间隔,1.75,月,由 SOURCES.core_updates_28mo（28 个月 16 次）直接推得,,假设,2026-07-26,敏感性区间 1.5 ~ 2.5
+假设,algo_shock_median,单次算法事件对可见度的中位乘数,0.985,倍,小型出版商长期承压：该中位数叠加事件频率后，年化中位拖累约 -10%，显著弱于 Chartbeat 观测到的 -60%，因为后者是存量站点且不含内容增量,,假设,2026-07-26,敏感性区间 0.96 ~ 1.0
+假设,algo_shock_sigma,单次算法事件乘数的对数标准差,0.16,-,使约 5% 的事件造成 35% 以上的可见度损失，与 2026-03 更新中 24.1% 页面跌出前 100 的观测量级相容,,假设,2026-07-26,敏感性区间 0.1 ~ 0.25
+假设,penalty_hazard_annual,遭遇人工处罚/大规模内容滥用判罚的年风险率,0.06,/年,全样本基准率为 1.9%（含大量人工站）；纯 AI 内容站的条件概率显著更高，本方案采用具名责任编辑与工具优先形态以压低该值，取 6% 并做敏感性,,假设,2026-07-26,敏感性区间 0.02 ~ 0.15
+假设,penalty_traffic_residual,遭处罚后残余流量比例,0.05,倍,案例观测为整目录被移出索引，且 AI 引用同步消失,,假设,2026-07-26,敏感性区间 0.01 ~ 0.15
+假设,penalty_recovery_prob,处罚后 12 个月内实质恢复的概率,0.22,-,Glenn Gabe 追踪的 HCU 受灾站中仅 22% 恢复了 20% 以上流量,,假设,2026-07-26,敏感性区间 0.1 ~ 0.35
+假设,pages_per_session,每会话页面浏览数,1.15,-,工具型与查询型内容以单页即走为主；用于会话 RPM 与 PV RPM 的换算,,假设,2026-07-26,敏感性区间 1.05 ~ 1.4
+假设,rpm_adsense,AdSense 阶段会话 RPM,5.0,美元/千会话,调研给出 3–8 美元区间，取中值,,假设,2026-07-26,敏感性区间 3.0 ~ 8.0
+假设,rpm_journey,Journey by Mediavine 阶段会话 RPM,8.5,美元/千会话,调研给出 5–12 美元区间，取中值,,假设,2026-07-26,敏感性区间 5.0 ~ 12.0
+假设,rpm_premium,Raptive / Mediavine Official 阶段会话 RPM（全年均值）,19.0,美元/千会话,调研中心估计 16–22 美元：政府福利类为低商业意图的信息型流量，不享有信用卡/保险类金融内容的溢价,,假设,2026-07-26,敏感性区间 10.0 ~ 30.0
+假设,rpm_annual_decay,RPM 的年衰减率,0.1,/年,Mediavine 发布商报告同比 -30%，但恒定 -30% 不可持续；取 -10% 作为长期结构性下行,,假设,2026-07-26,敏感性区间 0.0 ~ 0.25
+假设,b2b_arpa,B 端数据订阅的每账户月均收入,79.0,美元/月,面向 fintech、AI 应用与地方媒体的结构化数据订阅，定价在 29–199 美元区间取中枢；该价位使 Stripe 固定手续费占比降至 3% 以下，规避了 0.99 美元微支付的致命结构,,假设,2026-07-26,敏感性区间 29.0 ~ 199.0
+假设,b2b_conv_per_10k_sessions,每 1 万月会话可转化的 B 端付费账户数,0.35,个,消费者流量作为 B 端的发现渠道，转化率低但稳定；无外部基准，属本模型最弱的假设之一，已纳入敏感性分析,,假设,2026-07-26,敏感性区间 0.1 ~ 1.0
+假设,b2b_monthly_churn,B 端订阅月流失率,0.05,-,小微 B2B 数据订阅的常见量级,,假设,2026-07-26,敏感性区间 0.03 ~ 0.1
+假设,b2b_ramp_start_month,B 端通道开始产生收入的月份,13,月,第一年用于把 50 州发放规则做成可信数据集，无可售之物,,假设,2026-07-26,敏感性区间 9 ~ 18
+假设,b2b_inbound_per_month,不依赖消费者流量的 B 端月均自然获客数（目录、API 市场、开源渠道）,0.15,个/月,这是双通道方案真正的对冲价值所在：搜索流量归零时这条线仍在。泊松到达，稳态约 3 个账户；无外部基准，属弱假设,,假设,2026-07-26,敏感性区间 0.05 ~ 0.4
+假设,p_sale_given_threshold,达到可挂牌门槛后 5 年内实际成交的概率,0.75,-,Empire Flippers 平均在市 101.8 天，但其自述会在估值前拒掉多数提交；含 AI 内容的资产平均多花 54% 时间才售出,,假设,2026-07-26,敏感性区间 0.5 ~ 0.9
+假设,content_pages_total,五年内维护的页面总量,900,页,50 州 × 约 4 类页面 + 联邦付款日历 + Direct Express 过渡 + 长尾问答；刻意不做规模化铺量，因为大规模内容滥用政策与页面数无关而与意图有关,,假设,2026-07-26,敏感性区间 400 ~ 2000
+假设,llm_cost_per_page_cycle,每页每次生成/更新的 LLM 成本,0.03,美元,取 DeepSeek 0.0024 与 Opus 0.085 之间的偏保守值，含四段式核验流水线,,假设,2026-07-26,敏感性区间 0.0024 ~ 0.085
+假设,page_refresh_per_year,每页年均更新次数,4,次/年,发放日历按月变动，州规则按年变动；这是本产品准确性的核心成本,,假设,2026-07-26,敏感性区间 2 ~ 12
+假设,compliance_legal_reserve,合规一次性支出（品牌与页面合规审查、条款与免责声明起草）,800,美元,第 1140 条按每次浏览计罚，品牌名、域名、视觉与页面文案必须在发布前定型，这是发布前必须花的钱，不是事后审计项,,假设,2026-07-26,敏感性区间 300 ~ 2500
+假设,exit_multiple_base,退出倍数基准（已计入 AI 内容折让）,14.0,×月净利,Empire Flippers 30 万美元以下档为 22.42× 月净利；Motion Invest 实际成交显示含 AI 内容折让 39%，22.42 × 0.61 ≈ 13.7；B 端订阅收入占比可部分修复倍数,,假设,2026-07-26,敏感性区间 11.0 ~ 22.0
+假设,exit_min_profit,存在买家的最低月净利门槛,200.0,美元/月,低于此规模的资产在主流经纪平台上基本无法挂牌成交,,假设,2026-07-26,敏感性区间 100.0 ~ 500.0
+假设,exit_b2b_multiple_premium,B 端订阅收入部分的倍数溢价系数,1.8,倍,Acquire.com 已确认成交 SaaS 中位 3.9× 年净利，约为内容站 1.87× 的 2.1 倍；考虑到本方案 B 端体量小、客户集中，折半后取 1.8,,假设,2026-07-26,敏感性区间 1.0 ~ 2.5
+假设,mc_paths,蒙特卡洛路径数,20000,条,在 3 秒内可完成且使各分位数稳定,,假设,2026-07-26,
+假设,mc_horizon_months,模拟期长度,60,月,与 5 年收益率口径一致,,假设,2026-07-26,
+假设,mc_seed,随机种子,20260726,-,固定种子以保证结论可复现,,假设,2026-07-26,
