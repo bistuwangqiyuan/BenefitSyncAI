@@ -1,0 +1,8 @@
+{
+  "product": "DepositDay",
+  "product_cn": "到账日",
+  "version": "2026.08.1",
+  "updated_at": "2026-08-02",
+  "live_states": ["CA", "TX", "FL", "NY", "PA"],
+  "description": "Versioned public SNAP/EBT deposit rules and federal payment calendars. Free to beneficiaries. No credentials. No filing automation."
+}

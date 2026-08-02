@@ -1,0 +1,54 @@
+{
+  "state_code": "NY",
+  "state_name": "New York",
+  "status": "live",
+  "default_rule_id": "snap_upstate_case_last_digit",
+  "rules": {
+    "snap_upstate_case_last_digit": {
+      "state_code": "NY",
+      "state_name": "New York",
+      "program": "SNAP — Upstate (all counties except NYC five boroughs)",
+      "version": "2026.07.1",
+      "effective_from": "2020-01-01",
+      "updated_at": "2026-08-02",
+      "status": "live",
+      "summary": "Outside New York City, SNAP benefits are generally available based on the last digit of the case number (1st–9th of the month).",
+      "notes": [
+        "This mapping applies to Upstate NY / non-NYC counties per USDA FNS.",
+        "NYC cases use a separate six-month published schedule that changes month to month — see the NYC official schedule link in citations. This calculator does not invent NYC dates."
+      ],
+      "citations": [
+        {
+          "title": "Monthly Issuance Schedule All States — New York",
+          "url": "https://fns-prod.azureedge.us/sites/default/files/resource-files/Monthly-Issuance-Schedule-All-States.pdf",
+          "publisher": "USDA Food and Nutrition Service",
+          "retrieved_at": "2026-08-02"
+        },
+        {
+          "title": "NYC Issuance Schedule (six-month)",
+          "url": "https://fns-prod.azureedge.us/sites/default/files/media/file/NYC-Issuance%20Schedule.pdf",
+          "publisher": "USDA Food and Nutrition Service / NYC",
+          "retrieved_at": "2026-08-02"
+        }
+      ],
+      "input_hint": "Last digit of case number (0–9)",
+      "input": {
+        "kind": "case_last_digit",
+        "label": "Last digit of your case number",
+        "help": "Enter only the final digit. NYC residents should use the official NYC six-month schedule PDF instead."
+      },
+      "mapping": {
+        "0": 1,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9
+      }
+    }
+  }
+}

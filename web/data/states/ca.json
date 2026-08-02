@@ -1,0 +1,49 @@
+{
+  "state_code": "CA",
+  "state_name": "California",
+  "status": "live",
+  "default_rule_id": "calfresh_case_last_digit",
+  "rules": {
+    "calfresh_case_last_digit": {
+      "state_code": "CA",
+      "state_name": "California",
+      "program": "CalFresh (SNAP)",
+      "version": "2026.07.1",
+      "effective_from": "2020-01-01",
+      "updated_at": "2026-08-02",
+      "status": "live",
+      "summary": "CalFresh benefits are made available over the first 10 days of every month, based on the last digit of the county case number.",
+      "notes": [
+        "Use only the last digit of your CalFresh case number — never enter the full case number on this site.",
+        "Some county cash-aid programs (e.g. CalWORKs) use different schedules; this tool covers recurring CalFresh food benefits.",
+        "Los Angeles County follows the same last-digit pattern for CalFresh in the USDA FNS statewide table; always confirm with your county notice if unsure."
+      ],
+      "citations": [
+        {
+          "title": "Monthly Issuance Schedule All States — California",
+          "url": "https://fns-prod.azureedge.us/sites/default/files/resource-files/Monthly-Issuance-Schedule-All-States.pdf",
+          "publisher": "USDA Food and Nutrition Service",
+          "retrieved_at": "2026-08-02"
+        }
+      ],
+      "input_hint": "Last digit of case number (0–9)",
+      "input": {
+        "kind": "case_last_digit",
+        "label": "Last digit of your case number",
+        "help": "Find the case number on a Notice of Action or BenefitsCal. Enter only the final digit."
+      },
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "0": 10
+      }
+    }
+  }
+}

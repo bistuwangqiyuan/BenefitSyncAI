@@ -1,0 +1,66 @@
+{
+  "state_code": "FL",
+  "state_name": "Florida",
+  "status": "live",
+  "default_rule_id": "snap_digits_98",
+  "rules": {
+    "snap_digits_98": {
+      "state_code": "FL",
+      "state_name": "Florida",
+      "program": "SNAP / EBT food",
+      "version": "2026.07.1",
+      "effective_from": "2020-01-01",
+      "updated_at": "2026-08-02",
+      "status": "live",
+      "summary": "Florida SNAP food benefits are available from the 1st to the 28th based on the 9th and 8th digits of the case number read backwards (dropping the 10th digit).",
+      "notes": [
+        "Enter only the two-digit schedule code (00–99) — the 9th and 8th digits of your case number read backwards. Never paste a full case number.",
+        "Cash and SUNCAP benefits use a separate 1st–3rd schedule not covered by this food-benefit mapping."
+      ],
+      "citations": [
+        {
+          "title": "Monthly Issuance Schedule All States — Florida",
+          "url": "https://fns-prod.azureedge.us/sites/default/files/resource-files/Monthly-Issuance-Schedule-All-States.pdf",
+          "publisher": "USDA Food and Nutrition Service",
+          "retrieved_at": "2026-08-02"
+        }
+      ],
+      "input_hint": "Two-digit schedule code (00–99)",
+      "input": {
+        "kind": "fl_digits_98_ranges",
+        "label": "Two-digit schedule code",
+        "help": "From your Florida case number: drop the 10th digit, then take the 9th and 8th digits reading backwards as a two-digit code (00–99)."
+      },
+      "ranges": [
+        { "from": 0, "to": 3, "day_of_month": 1 },
+        { "from": 4, "to": 6, "day_of_month": 2 },
+        { "from": 7, "to": 10, "day_of_month": 3 },
+        { "from": 11, "to": 13, "day_of_month": 4 },
+        { "from": 14, "to": 17, "day_of_month": 5 },
+        { "from": 18, "to": 20, "day_of_month": 6 },
+        { "from": 21, "to": 24, "day_of_month": 7 },
+        { "from": 25, "to": 27, "day_of_month": 8 },
+        { "from": 28, "to": 31, "day_of_month": 9 },
+        { "from": 32, "to": 34, "day_of_month": 10 },
+        { "from": 35, "to": 38, "day_of_month": 11 },
+        { "from": 39, "to": 41, "day_of_month": 12 },
+        { "from": 42, "to": 45, "day_of_month": 13 },
+        { "from": 46, "to": 48, "day_of_month": 14 },
+        { "from": 49, "to": 53, "day_of_month": 15 },
+        { "from": 54, "to": 57, "day_of_month": 16 },
+        { "from": 58, "to": 60, "day_of_month": 17 },
+        { "from": 61, "to": 64, "day_of_month": 18 },
+        { "from": 65, "to": 67, "day_of_month": 19 },
+        { "from": 68, "to": 71, "day_of_month": 20 },
+        { "from": 72, "to": 74, "day_of_month": 21 },
+        { "from": 75, "to": 78, "day_of_month": 22 },
+        { "from": 79, "to": 81, "day_of_month": 23 },
+        { "from": 82, "to": 85, "day_of_month": 24 },
+        { "from": 86, "to": 88, "day_of_month": 25 },
+        { "from": 89, "to": 92, "day_of_month": 26 },
+        { "from": 93, "to": 95, "day_of_month": 27 },
+        { "from": 96, "to": 99, "day_of_month": 28 }
+      ]
+    }
+  }
+}

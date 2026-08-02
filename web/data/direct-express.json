@@ -1,0 +1,54 @@
+{
+  "version": "2026.08.1",
+  "updated_at": "2026-08-02",
+  "title": "Direct Express card transition",
+  "summary": "The U.S. Direct Express debit card program — used by millions of federal benefit recipients who do not use a traditional bank account — has been transitioning card-issuer operations from Comerica Bank to Fifth Third Bank. This page summarizes publicly reported facts and points you to official channels. DepositDay does not issue cards, handle balances, or collect card numbers.",
+  "timeline": [
+    {
+      "date": "2024–2025",
+      "event": "Treasury / Fiscal Service competitive process and transition planning for the Direct Express prepaid debit card program."
+    },
+    {
+      "date": "2025–2026",
+      "event": "Issuer transition communications to cardholders; new cards and customer-service channels associated with Fifth Third Bank begin to replace prior Comerica-era materials."
+    },
+    {
+      "date": "Ongoing",
+      "event": "Cardholders should watch mail/email from the official Direct Express program and update contact information through official channels only."
+    }
+  ],
+  "cardholder_notes": [
+    "Never share your full card number, PIN, or SSN with DepositDay or any unofficial site claiming to “sync” your benefits.",
+    "Phishing risk is elevated during issuer transitions — verify URLs and phone numbers against official Direct Express / Treasury sources before acting.",
+    "Your federal benefit deposit schedule (SSA/SSI/VA) is separate from which bank processes the Direct Express card.",
+    "If your card stops working, contact the official Direct Express customer service number printed on your card or listed on the official program site — not third-party “unlock” services."
+  ],
+  "official_links": [
+    {
+      "label": "Direct Express (official program)",
+      "url": "https://www.directexpress.com/"
+    },
+    {
+      "label": "U.S. Treasury Fiscal Service — Go Direct",
+      "url": "https://www.godirect.gov/"
+    },
+    {
+      "label": "Social Security — how you get paid",
+      "url": "https://www.ssa.gov/deposit/"
+    }
+  ],
+  "citations": [
+    {
+      "title": "Direct Express official site",
+      "url": "https://www.directexpress.com/",
+      "publisher": "Direct Express / program operator",
+      "retrieved_at": "2026-08-02"
+    },
+    {
+      "title": "Go Direct — electronic payments",
+      "url": "https://www.godirect.gov/",
+      "publisher": "U.S. Department of the Treasury",
+      "retrieved_at": "2026-08-02"
+    }
+  ]
+}

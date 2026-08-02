@@ -1,0 +1,50 @@
+{
+  "state_code": "PA",
+  "state_name": "Pennsylvania",
+  "status": "live",
+  "default_rule_id": "snap_business_day_staggered",
+  "rules": {
+    "snap_business_day_staggered": {
+      "state_code": "PA",
+      "state_name": "Pennsylvania",
+      "program": "SNAP — staggered business-day counties",
+      "version": "2026.07.1",
+      "effective_from": "2020-01-01",
+      "updated_at": "2026-08-02",
+      "status": "live",
+      "summary": "In staggered Pennsylvania counties (e.g. Allegheny), SNAP is issued over the first 10 business days based on the last digit of the 7-digit case record number.",
+      "notes": [
+        "Business days exclude weekends and U.S. federal holidays.",
+        "Many PA counties use a single fixed business day for all digits (e.g. Adams = 5th business day). If your county is single-cycle, confirm with your county assistance office — this tool implements the staggered digit→nth-business-day pattern documented for counties such as Allegheny.",
+        "Digit 1 → 1st business day … digit 9 → 9th; digit 0 → 10th business day."
+      ],
+      "citations": [
+        {
+          "title": "Monthly Issuance Schedule All States — Pennsylvania",
+          "url": "https://fns-prod.azureedge.us/sites/default/files/resource-files/Monthly-Issuance-Schedule-All-States.pdf",
+          "publisher": "USDA Food and Nutrition Service",
+          "retrieved_at": "2026-08-02"
+        }
+      ],
+      "input_hint": "Last digit of 7-digit case record (0–9)",
+      "input": {
+        "kind": "business_day_last_digit",
+        "label": "Last digit of your case record number",
+        "help": "Enter only the final digit of the 7-digit case record number."
+      },
+      "holiday_calendar": "us_federal",
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "0": 10
+      }
+    }
+  }
+}

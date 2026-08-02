@@ -6,6 +6,15 @@ __pycache__/
 .venv/
 venv/
 
+# Node / Next (web/)
+web/node_modules/
+web/.next/
+web/out/
+web/.vercel/
+web/.env
+web/.env.local
+web/.env*.local
+
 # OS / editor
 .DS_Store
 Thumbs.db

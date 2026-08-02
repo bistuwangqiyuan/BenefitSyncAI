@@ -1,0 +1,93 @@
+{
+  "version": "2026.08.1",
+  "updated_at": "2026-08-02",
+  "citations": [
+    {
+      "title": "Schedule of Social Security Benefit Payments — Publication 05-10031",
+      "url": "https://www.ssa.gov/pubs/EN-05-10031.pdf",
+      "publisher": "U.S. Social Security Administration",
+      "retrieved_at": "2026-08-02"
+    },
+    {
+      "title": "SSI payment dates (official)",
+      "url": "https://www.ssa.gov/ssi/",
+      "publisher": "U.S. Social Security Administration",
+      "retrieved_at": "2026-08-02"
+    },
+    {
+      "title": "VA compensation payment schedule",
+      "url": "https://www.va.gov/resources/federal-benefits-for-veterans-dependents-and-survivors/",
+      "publisher": "U.S. Department of Veterans Affairs",
+      "retrieved_at": "2026-08-02"
+    }
+  ],
+  "programs": [
+    {
+      "id": "ssi",
+      "name": "SSI (Supplemental Security Income)",
+      "summary": "Usually paid on the 1st of the month. If the 1st is a weekend or federal holiday, payment is issued on the preceding business day.",
+      "rule": {
+        "type": "first_of_month_prev_business",
+        "notes": "January 2026 SSI for that month was issued Dec 31, 2025 because Jan 1 is a holiday — the engine applies the same preceding-business-day rule."
+      }
+    },
+    {
+      "id": "ssa_birthday_wed",
+      "name": "Social Security (birthday Wednesday schedule)",
+      "summary": "For most people who began benefits in May 1997 or later: paid on the 2nd, 3rd, or 4th Wednesday based on birthday day-of-month band.",
+      "rule": {
+        "type": "nth_wednesday_by_birthday_band",
+        "bands": [
+          { "from_day": 1, "to_day": 10, "wednesday_n": 2 },
+          { "from_day": 11, "to_day": 20, "wednesday_n": 3 },
+          { "from_day": 21, "to_day": 31, "wednesday_n": 4 }
+        ],
+        "notes": "Enter only the day-of-month band of your birthday (1–10 / 11–20 / 21–31). We never ask for your full date of birth."
+      }
+    },
+    {
+      "id": "ssa_third",
+      "name": "Social Security (3rd-of-month schedule)",
+      "summary": "Common for people who began benefits before May 1997, or who receive both SSI and Social Security for the Social Security portion on the 3rd.",
+      "rule": {
+        "type": "third_of_month_prev_business",
+        "notes": "If the 3rd falls on a weekend or federal holiday, payment moves to the preceding business day."
+      }
+    },
+    {
+      "id": "va_compensation",
+      "name": "VA disability compensation (typical)",
+      "summary": "VA compensation is typically deposited on the first business day of the month for the prior month’s entitlement. Confirm with VA for your specific award.",
+      "rule": {
+        "type": "first_business_day",
+        "notes": "This is a general rule of thumb from publicly described VA practice; always verify with VA.gov or your award letter."
+      }
+    }
+  ],
+  "federal_holidays": [
+    "2025-12-25",
+    "2026-01-01",
+    "2026-01-19",
+    "2026-02-16",
+    "2026-05-25",
+    "2026-06-19",
+    "2026-07-03",
+    "2026-09-07",
+    "2026-10-12",
+    "2026-11-11",
+    "2026-11-26",
+    "2026-12-25",
+    "2027-01-01",
+    "2027-01-18",
+    "2027-02-15",
+    "2027-05-31",
+    "2027-06-18",
+    "2027-07-05",
+    "2027-09-06",
+    "2027-10-11",
+    "2027-11-11",
+    "2027-11-25",
+    "2027-12-24",
+    "2027-12-31"
+  ]
+}
